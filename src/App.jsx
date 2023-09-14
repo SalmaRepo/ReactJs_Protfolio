@@ -101,7 +101,7 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <div style={{ width: "100vw", position: "relative" }} id={theme}>
+        <div style={{ width: "100vw", position: "relative"}} id={theme}>
           <Header toggleTheme={toggleTheme} theme={theme} />
           
           <Routes>

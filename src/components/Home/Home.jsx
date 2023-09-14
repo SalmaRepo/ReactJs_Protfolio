@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import "./Home.css";
 export default function Home() {
   return (
-    <div className="HomeDesk">
+    <div className="homeDesk">
       <img className="homeImgDesk" src={HomeImg} alt="" />
       <div className="deskDesc">
         <h2 className="hello">Hello,</h2>

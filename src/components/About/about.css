@@ -20,6 +20,7 @@
     width: 100vw;
     margin: 0 auto;
     gap: 2rem;
+   
    margin-top: 1rem;
    position: relative;
    padding: 1rem;
@@ -46,10 +47,11 @@
     .aboutDesk{
 
         width: 80%;
-        margin:3.5rem auto;
+        margin:0 auto;
         
         height: 100vh;
         font-size: 1rem;
+        margin-top: 4rem;
     }
     .aboutMeDesc{
         display: flex;

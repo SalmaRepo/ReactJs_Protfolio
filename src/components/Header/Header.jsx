@@ -56,7 +56,7 @@ export default function Header({ theme, toggleTheme }) {
         {display && (
           <ul className={`${navClass()}`}>
             <i
-              class="fa-solid fa-xmark"
+              className="fa-solid fa-xmark"
               onClick={() => {
                 setDisplay(false);
               }}
@@ -78,14 +78,14 @@ export default function Header({ theme, toggleTheme }) {
 
         <button className="Theme" onClick={toggleTheme}>
           {theme === "dark" ? (
-            <i class="fa-solid fa-sun"></i>
+            <i className="fa-solid fa-sun"></i>
           ) : (
-            <i class="fa-solid fa-moon"></i>
+            <i className="fa-solid fa-moon"></i>
           )}
         </button>
 
         <i
-          class={`fa-solid fa-bars ${barsClass()}`}
+          className={`fa-solid fa-bars ${barsClass()}`}
           onClick={() => {
             setDisplay(!display);
             setClose(!close);
