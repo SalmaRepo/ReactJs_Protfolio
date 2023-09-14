@@ -1,0 +1,86 @@
+
+.aboutDesk{
+  font-size: 0.8rem;
+    width: 80%;
+    margin:0 auto;
+    height: 100vh;
+    padding: 1rem;
+    
+}
+.aboutMeDesc{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0 auto;
+    gap: 2rem;
+   margin-top: 1rem;
+   position: relative;
+   padding: 1rem;
+  
+ 
+ 
+  
+
+}
+
+#dark .projectContainer{
+    border: 0.5px solid rgb(250, 242, 242);
+}
+
+.myProjectsPara{
+    display: none;
+}
+
+
+
+
+
+@media (min-width:760px){
+    .aboutDesk{
+
+        width: 80%;
+        margin:3.5rem auto;
+        
+        height: 100vh;
+        font-size: 1rem;
+    }
+    .aboutMeDesc{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .projectContainer{
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        margin: 0 auto;
+        box-shadow: 2px 2px 6px 2px gray;
+        overflow-x: auto;
+        gap: 1rem;
+       margin-top: 1rem;
+       position: relative;
+       padding: 2rem;
+     
+    
+    }
+    
+    #dark .projectContainer{
+        border: 0.5px solid rgb(250, 242, 242);
+    }
+    
+    .myProjectsPara{
+        display: flex;
+    }
+    
+    
+    
+}

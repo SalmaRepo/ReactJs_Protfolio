@@ -1,0 +1,209 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.801);
+}
+#dark .navbar {
+  background-color: rgba(10, 10, 10, 0.579);
+  color: rgb(248, 244, 244);
+}
+
+.logo {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: lighter;
+  margin-left: 0.5rem;
+}
+
+.deskNav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  color: rgb(245, 17, 55);
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.Theme {
+  /*  padding: 0.2rem 1rem; */
+  
+  /*   border-radius: 2rem; */
+  border: none;
+
+  background-color:  rgba(255, 255, 255, 0.801);;
+
+  /*   background-color: rgba(11, 11, 11, 0.579); */
+  /*   color: white; */
+  font-size: 1.3rem;
+}
+
+.fa-sun{
+  color: white;
+}
+
+.fa-moon{
+  color: black;
+}
+#dark .Theme {
+  background-color: rgb(10, 10, 10);
+  
+}
+
+/* #light .Theme::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  left: 0;
+  background-color: rgba(237, 237, 241, 0.601);
+  z-index: 100;
+}
+
+#dark .Theme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  padding: 0.9rem;
+  border-radius: 50%;
+  right: 2rem;
+  background-color: rgba(41, 41, 41, 0.435);
+  z-index: 100;
+  transform: translateX(2rem);
+}
+ */
+.fa-bars {
+  font-size: 2rem;
+  display: flex;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.navLinksMobil {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  top: 4rem;
+  font-size: 1.2rem;
+  right: -3rem;
+  z-index: 2;
+  width: 60%;
+  background-color: rgba(40, 40, 38, 0.55);
+  border-radius: 1rem;
+  padding: 1rem 0;
+  border: 2px solid;
+  animation: mobilNav 0.5s ease 0.2s forwards;
+}
+
+@keyframes mobilNav {
+  0% {
+    transform: translateX(0rem);
+  }
+
+  100% {
+    transform: translateX(-2rem);
+  }
+}
+
+#dark .navLinksMobil {
+  background-color: rgba(215, 215, 203, 0.15);
+}
+
+a {
+  background-color: rgba(196, 187, 187, 0.549);
+  padding: 0.2rem 3rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fa-xmark {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  background-color: rgba(214, 217, 217, 0.266);
+  padding: 1rem;
+  border-radius: 50%;
+  animation: mobilNav 0.5s ease 0.3s forwards;
+}
+.barsAnim {
+  animation: bars 0.5s ease 0.1s;
+}
+@keyframes bars {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@media (min-width: 760px) {
+
+  .navbar{
+    width:100%
+  }
+
+  .Theme{
+    margin-right: 3rem;
+  }
+  .fa-bars {
+    display: none;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: none;
+    padding: 0;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+
+  }
+
+  a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .active {
+    background: none;
+  }
+
+  /* a{
+      color: black;
+      text-decoration: none;
+      
+  } */
+
+  #dark a {
+    color: white;
+  }
+
+  #dark .active {
+    color: white;
+  }
+}

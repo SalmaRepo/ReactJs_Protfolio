@@ -1,0 +1,136 @@
+.HomeDesk {
+  height: 100vh;
+  display: flex;
+  /* flex-wrap: wrap; */
+
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.homeImgDesk {
+  width: 40%;
+  height: 40rem;
+  position: absolute;
+  /* margin-top: 12rem; */
+  left: 4rem;
+  bottom: -1.0rem;
+  object-fit: cover;
+  object-position: top;
+  filter: drop-shadow(0 0 1rem rgb(213, 141, 159));
+
+  animation: img 6s ease 0.5s forwards;
+}
+
+.homeImgDesk:hover {
+  animation: img 5s ease 1s forwards;
+}
+
+@keyframes img {
+  0% {
+    transform: translate(0rem, 0rem);
+  }
+
+  100% {
+    transform: translate(2rem, -2rem);
+  }
+}
+
+.deskDesc {
+  font-size: 1.2rem;
+  width: 50%;
+  overflow: auto;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 12rem;
+  padding: 1rem;
+  right: 0rem;
+  gap: 0rem;
+  
+
+  /* background-color: rgba(240, 248, 255, 0.332); */
+}
+
+#dark .deskDesc {
+  background-color: none;
+}
+.nameDesk {
+  color: rgb(245, 17, 55);
+}
+
+.contactDesk {
+  background-color: rgba(14, 14, 14, 0.881);
+  max-width: 30%;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+#dark .contactDesk {
+  background-color: rgb(241, 235, 236);
+  color: rgb(16, 16, 16);
+}
+
+.hello {
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+.webDev {
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 761px) {
+  .HomeDesk {
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+  }
+  .homeImgDesk {
+    width: 100%;
+    height: 18rem;
+    left: 0rem;
+    right: 0;
+    bottom: 4rem;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+   
+  }
+  .deskDesc {
+    min-width: 80%;
+    right: 0;
+    top: 5rem;
+    padding: 1rem;
+    left: 1rem;
+    padding: 0;
+ z-index: 1;
+    font-size: 1rem;
+   background-color: rgba(255, 255, 255, 0.192);
+  }
+
+ 
+
+  .contactDesk {
+    min-width: 50%;
+  }
+
+  .hello {
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+  .webDev {
+    font-size: 2rem;
+  }
+}
