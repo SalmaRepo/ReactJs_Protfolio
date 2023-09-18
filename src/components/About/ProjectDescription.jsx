@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { MyContext } from "../../App";
+import { MainContext } from "../../contexts/MainContext/mainContext";
 import CodeButton from "./CodeButton";
 
 export default function ProjectDescription() {
@@ -11,7 +11,7 @@ export default function ProjectDescription() {
     setProjectDescDisplay,
     like,
     setLike,
-  } = useContext(MyContext);
+  } = useContext(MainContext);
   console.log(projectId, projectDescDisplay);
   let projectDisp = projects.find((project) => project.id == projectId);
   console.log(projectDisp);

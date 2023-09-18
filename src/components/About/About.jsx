@@ -1,5 +1,6 @@
 import { useContext, useState, useRef } from "react";
-import { MyContext } from "../../App";
+
+import { MainContext } from "../../contexts/MainContext/mainContext";
 import "./about.css";
 import AboutCards from "./AboutCards";
 

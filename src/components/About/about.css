@@ -3,9 +3,14 @@
   font-size: 0.8rem;
     width: 80%;
     margin:0 auto;
-    height: 100vh;
+    position: relative;
     padding: 1rem;
     
+}
+
+#dark .aboutDesk{
+    background-color: black;
+    color: white;
 }
 .aboutMeDesc{
     display: flex;
@@ -48,8 +53,8 @@
 
         width: 80%;
         margin:0 auto;
+        position: relative;
         
-        height: 100vh;
         font-size: 1rem;
         margin-top: 4rem;
     }

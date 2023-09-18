@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect, useRef } from "react";
-import { MyContext } from "../../App";
+
+import { MainContext } from "../../contexts/MainContext/mainContext";
 import "./aboutCards.css";
 import ProjectDescription from "./ProjectDescription";
 
@@ -12,7 +13,7 @@ export default function AboutCards() {
     projectId,
     setLike,
     like,
-  } = useContext(MyContext);
+  } = useContext(MainContext);
 
   const scroll = useRef();
 
@@ -24,7 +25,7 @@ export default function AboutCards() {
           scroll.current.scrollLeft -= 500;
         }}
       >
-        <i class="fa-solid fa-chevron-left"></i>
+        <i className="fa-solid fa-chevron-left"></i>
       </div>
       <div className="projectCardsContainer" ref={scroll}>
         {projects.map((project) => {
@@ -47,7 +48,7 @@ export default function AboutCards() {
               <h3
                 className="projectTitle"
                 onMouseOver={(e) => {
-                  setLike(false);
+                  /* setLike(false); */
                   console.dir(e.target.parentElement);
                   if (e.target.parentElement.id === `${project.id}`) {
                     setProjectDescDisplay(true);
@@ -77,7 +78,7 @@ export default function AboutCards() {
             scroll.current.scrollLeft += 500;
           }}
         >
-          <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </div>
     </div>
   );

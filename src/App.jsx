@@ -1,24 +1,26 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Header from "./components/Header/Header.jsx";
 import Home from "./components/Home/Home.jsx";
+import Work from "./components/Work/workComponents/Work";
 import NotFound from "./components/NotFound";
 import { createContext } from "react";
-
-import Work from "./components/Work/Work";
-
-export const MyContext = createContext();
+import WorkProvider from "./components/Work/workContexts/WorkProvider";
+import { MainContext } from "./contexts/MainContext/mainContext";
+import { ThemeContext } from "./contexts/ThemeContext/contextTheme";
+import MainContextProvider from "./contexts/MainContext/MainContextProvider";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const [projectDescDisplay, setProjectDescDisplay] = useState(false);
-  const [projectId, setProjectId] = useState("");
+  const {   mount,setMount,theme, setTheme, toggleTheme } =
+    useContext(ThemeContext);
 
-
-  const [like, setLike] = useState(false);
+  console.log(mount);
+  useEffect(() => {
+    setMount(true);
+  }, []); 
 
   const projects = [
     {
@@ -31,7 +33,7 @@ function App() {
         { codeStack: "Html,CSS,JavaScript" },
         {
           brief:
-            "This is a simple calculator app.You can perform all the basic mathematical operations.It is completely responsive.This app also allows you to perform operations in decimals"
+            "This is a simple calculator app.You can perform all the basic mathematical operations.It is completely responsive.This app also allows you to perform operations in decimals",
         },
       ],
     },
@@ -43,7 +45,10 @@ function App() {
         { title: "Age-Calculator" },
         { code: "link" },
         { codeStack: "Html,CSS,JavaScript" },
-        { brief: "Age Calculator Application helps you find out your age based on the date,month and year of birth you entered on just one click.Try this Applicaton to know your age." },
+        {
+          brief:
+            "Age Calculator Application helps you find out your age based on the date,month and year of birth you entered on just one click.Try this Applicaton to know your age.",
+        },
       ],
     },
     {
@@ -81,39 +86,42 @@ function App() {
     },
   ];
 
-  function toggleTheme() {
+  /*   function toggleTheme() {
     theme === "light" ? setTheme("dark") : setTheme("light");
-  }
+  } */
 
   return (
-    <MyContext.Provider
-      value={{
-        theme,
-        setTheme,
-        projects,
-        projectDescDisplay,
-        setProjectDescDisplay,
-        projectId,
-        setProjectId,
-        like,
-        setLike,
-        
-      }}
-    >
-      <BrowserRouter>
-        <div style={{ width: "100vw", position: "relative"}} id={theme}>
+    <MainContextProvider>
+      <div style={{ width: "100vw", position: "relative" }} id={theme}>
+        <BrowserRouter>
           <Header toggleTheme={toggleTheme} theme={theme} />
-          
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
+            <Route
+              path="/work"
+              element={
+                <WorkProvider>
+                  <Work />
+                </WorkProvider>
+              }
+            />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
-      </BrowserRouter>
-    </MyContext.Provider>
+        </BrowserRouter>
+
+        {mount && (
+          <div>
+            <About />
+            <WorkProvider>
+              <Work />
+            </WorkProvider>
+            <Contact />
+          </div>
+        )}
+      </div>
+    </MainContextProvider>
   );
 }
 
