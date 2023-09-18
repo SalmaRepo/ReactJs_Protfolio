@@ -1,179 +1,278 @@
-.workContainer{
-    
+.workContainer {
+  margin: 6rem auto;
+  width: 100%;
+  display: flex;
+ 
+}
+
+#dark .workContainer {
+  background-color: black;
+  color: white;
+}
+
+.line {
+  height: 280vh;
+  width: 0.1%;
+  margin: 3rem auto;
+  background-color: rgb(43, 0, 255);
+}
+
+.circle {
+  width: 2rem;
+  background-color: black;
+}
+
+.timeLineCardLeft,
+.timeLineCardRight {
+  box-shadow: -2px 2px 5px 2px gray;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+  border-top: 2px solid rgb(132, 180, 248);
+  width: 90%;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 6rem;
+  animation: moveDown 0.2s ease 1s backwards;
+}
+
+.timeLineCardLeft::before {
+  content: "";
+  position: absolute;
+  right: -1.4rem;
+  width: 0;
+  height: 0;
+  border-top: 12px solid rgb(141, 222, 243);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(-90deg);
+}
+.timeLineCardRight {
+  box-shadow: 2px 2px 5px 2px gray;
+  border-top: 2px solid rgb(236, 141, 243);
+}
+
+.timeLineCardRight::before {
+  content: "";
+  position: absolute;
+  left: -1.3rem;
+  width: 0;
+  height: 0;
+  border-top: 12px solid rgb(141, 222, 243);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(90deg);
+}
+
+.timeLineCardLeftContainer {
+  margin-top: 4rem;
+  padding-top: 0rem;
+  margin-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16rem;
+  animation-delay: 2s;
+}
+
+.timeLineCardLeft:nth-child(1) {
+  animation-delay: 2s;
+}
+
+.timeLineCardRight:nth-child(1) {
+  animation-delay: 3s;
+}
+
+.timeLineCardLeft:nth-child(2) {
+  animation-delay: 4s;
+}
+.timeLineCardRight:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.timeLineCardLeft:nth-child(3) {
+  animation-delay: 6s;
+}
+.timeLineCardRight:nth-child(3) {
+  animation-delay: 7s;
+}
+.timeLineCardLeft:nth-child(4) {
+  animation-delay: 8s;
+}
+.timeLineCardRight:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.timeLineCardLeft:nth-child(5) {
+  animation-delay: 10s;
+}
+.timeLineCardRight:nth-child(5) {
+  animation-delay: 11s;
+}
+.timeLineCardLeft:nth-child(6) {
+  animation-delay: 12s;
+}
+.timeLineCardRight:nth-child(6) {
+  animation-delay: 13s;
+}
+.timeLineCardLeft:nth-child(7) {
+  animation-delay: 14s;
+}
+.timeLineCardRight:nth-child(7) {
+  animation-delay: 15s;
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(0rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(1.5rem);
+  }
+}
+
+.timeLineCardRightContainer {
+  margin-top: 5rem;
+
+  gap: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+  animation-delay: 4s;
+  margin-left: 4rem;
+}
+
+.fa-briefcase,
+.fa-graduation-cap {
+  font-size: 3rem;
+  background-color: rgba(148, 200, 240, 0.825);
+  padding: 1rem;
+  border-radius: 50%;
+  
+  border: 5px solid rgb(92, 89, 89);
+}
+
+.timeLine {
+  width: 0.5rem;
+  height: 0rem;
+  background-color: rgba(27, 235, 165, 0.021);
+  padding: 0 1px;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  z-index: 1;
+  animation: move 1s linear 0.2s forwards;
+}
+
+@keyframes move {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+
+  100% {
+    height: inherit;
+    opacity: 1;
+
+    background-color: rgba(8, 9, 9, 0.797);
+  }
+}
+
+@keyframes iconBlink {
+  0% {
+    opacity: 0;
+    transform: rotate3d(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate3d(3, 3, 3, 360deg);
+  }
+}
+
+.iconLeft,
+.iconRight {
+  position: absolute;
+  right: -7rem;
+  top: -1rem;
+  z-index: 4;
+  color: rgb(59, 59, 64);
+  animation: iconBlink 10s linear 1s;
+}
+
+.iconLeft {
+  width: 6rem;
+  position: absolute;
+  right: -7rem;
+  top: -1rem;
+  z-index: 4;
+  color: rgb(59, 59, 64);
+}
+
+.iconRight {
+  position: absolute;
+  width: 6rem;
+  left: -7rem;
+  top: -1rem;
+  z-index: 4;
+  color: rgb(59, 59, 64);
+}
+
+@media (max-width: 760px) {
+  .workContainer {
     margin: 5rem auto;
     width: 80%;
     display: flex;
-
-}
-
-#dark .workContainer{
-    background-color: black;
-    color: white;
-}
-
-
-
-.line{
-    height: 280vh;
-    width: 0.1%;
-    margin:3rem auto;
-    background-color: rgb(43, 0, 255);
-}
-
-.circle{
-    width:2rem;
-    background-color:black
-}
-
-.timeLineCardLeft,.timeLineCardRight{
-    box-shadow: 2px 2px 2px 2px gray;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    
-    padding: 2rem;
-
-    width: 60%;
-    flex-wrap: wrap;
+    font-size: 1rem;
     position: relative;
-    margin-top: 6rem;
-    animation: moveDown 2s linear 1s backwards;
+    gap: 0;
+    border-left: 2px solid;
 
-}
-
-.timeLineCardLeftContainer{
-    margin-top: 5rem;
-    padding-top: 5rem;
     
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8rem;
-   animation-delay: 2s;
-    
-}
+  }
 
-.timeLineCardLeft:nth-child(1){
-    animation-delay:1s;
-}
-
-.timeLineCardRight:nth-child(1){
-    animation-delay: 2s;
-}
-
-.timeLineCardLeft:nth-child(2){
-    animation-delay: 4s
-}
-.timeLineCardRight:nth-child(2){
-    animation-delay: 5s;
-}
-
-.timeLineCardLeft:nth-child(3){
-    animation-delay: 6s
-}
-.timeLineCardRight:nth-child(3){
-    animation-delay: 7s;
-}
-.timeLineCardLeft:nth-child(4){
-    animation-delay: 8s
-}
-.timeLineCardRight:nth-child(4){
-    animation-delay: 9s
-}
-
-.timeLineCardLeft:nth-child(5){
-    animation-delay: 10s
-}
-.timeLineCardRight:nth-child(5){
-    animation-delay: 11s
-}
-.timeLineCardLeft:nth-child(6){
-    animation-delay: 12s
-}
-.timeLineCardRight:nth-child(6){
-    animation-delay: 13s
-}
-.timeLineCardLeft:nth-child(7){
-    animation-delay: 14s
-}
-.timeLineCardRight:nth-child(7){
-    animation-delay: 15s
-}
-
-
-
-
-
-
-
-
-@keyframes moveDown{
-    0%{
-        opacity: 0;
-        transform:translateY(0rem)
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateY(-2rem);
-    }
-}
-
-.timeLineCardRightContainer{
-    margin-top: 0rem;
-   gap: 6rem;
-    display: flex;
-    flex-direction: column;
+  .timeLineCardLeft,
+  .timeLineCardRight {
+    width: 65vw;
+    font-size: 0.6rem;
+  
+  }
+  .timeLineCardLeftContainer {
     align-items: flex-start;
-    justify-content: center;
-    padding-top: 16rem;
-    animation-delay: 4s;
-    
-    
-}
-
-.fa-briefcase,.fa-graduation-cap{
-    font-size: 3rem;
-    background-color: rgba(97, 95, 92, 0.388);
-    padding: 1rem;
-    border-radius: 50%;
-}
-
-.timeLine{
-    width: 1rem;
-    height: 0rem;
-    background-color: rgba(181, 237, 218, 0.021);
-    padding:0 1px;
-    border-radius: 2rem;
-    margin-top: 5rem;
-    z-index: 1;
-    animation: move 10s linear 1s forwards ;
-}
-
-@keyframes move{
-    0%{
-        height: 0rem;
-    }
-
-    100%{
-        height:inherit;
-        background-color: rgba(181, 237, 218, 0.797);
-    }
-}
-
-.iconLeft,.iconRight{
+   margin-top: 5rem;
+    margin-left: 3rem;
+    gap: 30rem;
+  }
+  .timeLineCardRightContainer {
     position: absolute;
-    right: -2rem;
-    top:-1rem;
-    z-index: 4;
+    left: -2rem;
+    margin-top: 26rem;
+    gap: 30rem;
+   
+  }
 
+  .timeLineCardLeft:before {
+    left: -1.3rem;
+    rotate: 180deg;
+  }
+
+  .timeLine {
+    display: none;
+  }
+
+  .iconRight,
+  .iconLeft {
+    left: -4rem;
+    width: 3rem;
+  
+    font-size: 1rem;
+    border: 1px solid;
+  }
 }
-
-.iconRight{
-    left:-2rem
-}
-
-
-

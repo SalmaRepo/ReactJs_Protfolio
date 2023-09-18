@@ -2,9 +2,10 @@
 .aboutDesk{
   font-size: 0.8rem;
     width: 80%;
-    margin:0 auto;
+    margin:5rem auto;
     position: relative;
     padding: 1rem;
+  
     
 }
 
@@ -22,14 +23,14 @@
 .projectContainer{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     gap: 2rem;
-   
+ 
    margin-top: 1rem;
    position: relative;
    padding: 1rem;
-  
+  border: 1px solid;
  
  
   

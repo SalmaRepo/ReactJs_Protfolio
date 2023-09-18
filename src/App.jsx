@@ -113,8 +113,8 @@ function App() {
 
         {mount && (
           <div>
-            <About />
-            <WorkProvider>
+              <About />
+              <WorkProvider>
               <Work />
             </WorkProvider>
             <Contact />

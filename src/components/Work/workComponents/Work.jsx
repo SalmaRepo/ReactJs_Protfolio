@@ -90,11 +90,11 @@ export default function Work() {
           return (
             index % 2 !== 0 && (
               <div key={data.id} className="timeLineCardRight">
-                <div className="iconRight">
+                <div>
                   {data.type === "work" ? (
-                    <i className="fa-solid fa-briefcase"></i>
+                    <i className="fa-solid fa-briefcase iconRight"></i>
                   ) : (
-                    <i className="fa-solid fa-graduation-cap"></i>
+                    <i className="fa-solid fa-graduation-cap iconRight"></i>
                   )}
                 </div>
                 <h3>{data.title}</h3>

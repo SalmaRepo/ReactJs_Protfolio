@@ -1,5 +1,5 @@
 .projectImageSize {
-  width: 14rem;
+  width: 10rem;
   height: 12rem;
   object-fit: cover;
   border-radius: 0.5rem;
@@ -18,16 +18,20 @@
   display: flex;
   width: 100%;
 
-  gap: 1rem;
-  padding: 1rem;
-  flex-wrap: wrap;
+  gap: 3rem;
+  
+  overflow-x: auto;
+
 }
 .projectCardStyle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   background-color: none;
   width: 100%;
+  padding-bottom: 8rem;
+ 
 }
 
 /* .scrollerRight {
@@ -51,18 +55,42 @@
   border: 3px solid black;
 } */
 
+.scrollerRight {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+}
+
+#dark .scrollerRight,
+.scrollerLeft {
+  color: white;
+}
+
+.scrollerLeft {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(24, 23, 23);
+
+}
+
 .projectDescCard {
   position: absolute;
-  display: none;
-  left: 12rem;
-  bottom: -5rem;
+
+  left: 2rem;
+  bottom: -10rem;
   /*     animation: hoverDescAnim 0.3s ease 0.3s forwards; */
   z-index: 5;
   background-color: white;
   padding: 1.5rem;
   border: 1px solid gray;
   box-shadow: -1px 1px 10px 2px gray;
-  width: 100%;
+  width: 80%;
 }
 
 @media (min-width: 750px) {
