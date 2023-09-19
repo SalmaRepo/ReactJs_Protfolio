@@ -1,7 +1,9 @@
 export default function Contact(){
     return(
-        <>
-        <p>Contact</p>
-        </>
+       
+       <div className="contactSection" id='Contact'>
+        
+
+       </div>
     )
 }

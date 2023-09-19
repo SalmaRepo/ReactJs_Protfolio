@@ -93,7 +93,7 @@ function App() {
   return (
     <MainContextProvider>
       <div style={{ width: "100vw", position: "relative" }} id={theme}>
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Header toggleTheme={toggleTheme} theme={theme} />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -109,10 +109,15 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
+
+
+
 
         {mount && (
           <div>
+            <Header toggleTheme={toggleTheme} theme={theme} />
+            <Home/>
               <About />
               <WorkProvider>
               <Work />

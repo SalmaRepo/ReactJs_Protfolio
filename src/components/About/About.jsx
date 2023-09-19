@@ -3,11 +3,12 @@ import { useContext, useState, useRef } from "react";
 import { MainContext } from "../../contexts/MainContext/mainContext";
 import "./about.css";
 import AboutCards from "./AboutCards";
+import Skills from "./Skills";
 
 export default function About() {
   
   return (
-    <div className="aboutDesk">
+    <div className="aboutDesk" id='About'>
       <div className="aboutMeDesc">
         <h1>Who am I?</h1>
         <p className="aboutMePara">
@@ -44,6 +45,7 @@ export default function About() {
         <AboutCards />
       
       </div>
+      <Skills/>
     </div>
   );
 }

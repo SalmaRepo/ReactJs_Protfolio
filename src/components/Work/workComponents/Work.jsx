@@ -2,7 +2,7 @@ import "./work.css";
 
 import styled, { keyframes } from "styled-components";
 
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import { WorkContext } from "../workContexts/contextWork";
 import WorkProvider from "../workContexts/WorkProvider";
 
@@ -28,44 +28,32 @@ const CardLeft = styled.div`
 
 
 export default function Work() {
-  const { scroll, setScroll, timeLineData } = useContext(WorkContext);
+  const { animLeft,animRight,setAnimLeft,setAnimRight, timeLineData } = useContext(WorkContext);
 /*   console.log(timeLineData); */
   /*   workData=timeLineData.filter(data=>data.type==='work');
   studyData=timeLineData.filter(data=>data.type==='study');
   gapData=timeLineData.filter(data=>data.type==='gap'); */
 
-  let animDuration = 0;
-
-  const animTime = () => {
-    return (animDuration += 1);
-  };
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 200) {
-      animTime();
-      setScroll(animDuration);
-    } else if (window.scrollY >= 300) {
-      animTime();
-      setScroll(animDuration);
-    } else if (window.scrollY >= 500) {
-      animTime();
-      setScroll(animDuration);
-    } else if (window.scrollY >= 700) {
-      animTime();
-      setScroll(animDuration);
-    } else if (window.scrollY >= 900) {
-      animTime();
-      setScroll(animDuration);
+  
+useEffect(()=>{
+  window.addEventListener('scroll',()=>{
+    console.log(window.scrollY)
+    if(window.scrollY>1000 || window.scrollY>2000){
+      setAnimLeft(true);
+      setAnimRight(true);
     }
-  });
+  })
+},[])
+   
 
+ 
   return (
-    <div className="workContainer">
+    <div className="workContainer" id='Work'>
       <div className="timeLineCardLeftContainer">
         {timeLineData.map((data, index) => {
           return (
             index % 2 === 0 && (
-              <div key={data.id} className="timeLineCardLeft ">
+              <div key={data.id} className={`timeLineCardLeft ${animLeft&&'timeLineCardLeftAnim'}`} >
                 <div>
                   {data.type === "work" ? (
                     <i className="fa-solid fa-briefcase iconLeft"></i>
@@ -89,7 +77,7 @@ export default function Work() {
         {timeLineData.map((data, index) => {
           return (
             index % 2 !== 0 && (
-              <div key={data.id} className="timeLineCardRight">
+              <div key={data.id} className={`timeLineCardRight ${animRight&&'timeLineCardRightAnim'}`}>
                 <div>
                   {data.type === "work" ? (
                     <i className="fa-solid fa-briefcase iconRight"></i>

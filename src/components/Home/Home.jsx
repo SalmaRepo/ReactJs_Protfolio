@@ -47,7 +47,7 @@ console.log(window.scrollY)
     <>
     
   
-    <div className="homeDesk">
+    <div className="homeDesk" id='Home'>
       <div>
         <img className="homeImgDesk" src={HomeImg} alt="" />
         <div className="deskDesc">

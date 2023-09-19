@@ -43,7 +43,7 @@ export default function Header() {
       <nav className="navbar">
         <div className="logo">{`{S.S}`}</div>
         <div className="deskNav">
-          {deskDisplay && (
+{/*           {deskDisplay && (
             <ul className={`${navClass()}`}>
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -79,6 +79,46 @@ export default function Header() {
               </li>
               <li>
                 <NavLink to="/contact">Contact</NavLink>
+              </li>
+            </ul>
+          )} */}
+
+{deskDisplay && (
+            <ul className={`${navClass()}`}>
+              <li>
+                <a href="#Home">Home</a>
+              </li>
+              <li>
+              <a href="#About">About</a>
+              </li>
+              <li>
+              <a href="#Work">Work</a>
+              </li>
+              <li>
+              <a href="#Contact">Contact</a>
+              </li>
+            </ul>
+          )}
+
+{display && (
+            <ul className={`${navClass()}`}>
+              <i
+                className="fa-solid fa-xmark"
+                onClick={() => {
+                  setDisplay(false);
+                }}
+              ></i>
+              <li>
+                <a href="#Home">Home</a>
+              </li>
+              <li>
+              <a href="#About">About</a>
+              </li>
+              <li>
+              <a href="#Work">Work</a>
+              </li>
+              <li>
+              <a href="#Contact">Contact</a>
               </li>
             </ul>
           )}

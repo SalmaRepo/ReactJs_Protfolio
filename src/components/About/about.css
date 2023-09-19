@@ -45,6 +45,91 @@
     display: none;
 }
 
+.skillsSectionContainer{
+    height: 100vh;
+    border: 2px solid;
+    
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.skillsSection{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: space-between;
+  
+    padding: 1rem;
+}
+
+.skillsTechnicalContainer{
+
+display: flex;
+width: 40%;
+flex-direction: column;
+gap: 1rem;
+margin: 2rem 0;
+}
+
+.technicalSkillsCard{
+    width: 100%;
+
+
+  
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.technicalSkillType{
+    display: flex;
+  
+    justify-content: space-between;
+}
+
+.skillBar{
+    height: 0.8rem;
+    background-color: rgba(246, 239, 239, 0.411);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+
+
+.htmlSkillBar:before,.cssSkillBar:before,.jsSkillBar:before,.reactSkillBar:before,.pythonSkillBar:before{
+    content:'';
+    position: absolute;
+    height: inherit;
+    width: 90%;
+    background-color: rgba(105, 239, 217, 0.88);
+    border-radius: 1rem;
+    animation: skills 0.7s linear 0.2s backwards;
+}
+
+.jsSkillBar:before{
+    width: 80%;
+}
+.reactSkillBar:before{
+    width: 65%;
+}
+.pythonSkillBar:before{
+    width:50%
+}
+
+@keyframes skills{
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+
+    100%{
+        opacity: 1;
+        width: 90%;
+        transform: translateX(0.3rem);
+    }
+}
+
 
 
 

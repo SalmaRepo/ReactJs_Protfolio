@@ -1,3 +1,5 @@
+
+
 .workContainer {
   margin: 6rem auto;
   width: 100%;
@@ -22,7 +24,7 @@
   background-color: black;
 }
 
-.timeLineCardLeft,
+/* .timeLineCardLeft,
 .timeLineCardRight {
   box-shadow: -2px 2px 5px 2px gray;
   border-radius: 0.5rem;
@@ -36,7 +38,75 @@
   flex-wrap: wrap;
   position: relative;
   margin-top: 6rem;
-  animation: moveDown 0.2s ease 1s backwards;
+
+} */
+
+.timeLineCardLeft,
+.timeLineCardRight{
+  box-shadow: -2px 2px 5px 2px gray;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+  border-top: 2px solid rgb(132, 180, 248);
+  width: 90%;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 6rem;
+}
+
+.timeLineCardLeftAnim,
+.timeLineCardRightAnim{
+  animation: moveDown 0.2s ease 0.5s backwards;
+}
+
+.timeLineCardLeftAnim:nth-child(1) {
+  animation-delay: 2s;
+}
+
+.timeLineCardRightAnim:nth-child(1) {
+  animation-delay: 3s;
+}
+
+.timeLineCardLeftAnim:nth-child(2) {
+  animation-delay: 4s;
+}
+.timeLineCardRightAnim:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.timeLineCardLeftAnim:nth-child(3) {
+  animation-delay: 6s;
+}
+.timeLineCardRightAnim:nth-child(3) {
+  animation-delay: 7s;
+}
+.timeLineCardLeftAnim:nth-child(4) {
+  animation-delay: 8s;
+}
+.timeLineCardRightAnim:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.timeLineCardLeftAnim:nth-child(5) {
+  animation-delay: 10s;
+}
+.timeLineCardRightAnim:nth-child(5) {
+  animation-delay: 11s;
+}
+.timeLineCardLeftAnim:nth-child(6) {
+  animation-delay: 12s;
+}
+.timeLineCardRighAnim:nth-child(6) {
+  animation-delay: 13s;
+}
+.timeLineCardLeftAnim:nth-child(7) {
+  animation-delay: 14s;
+}
+.timeLineCardRightAnim:nth-child(7) {
+  animation-delay: 15s;
 }
 
 .timeLineCardLeft::before {
@@ -58,10 +128,10 @@
 .timeLineCardRight::before {
   content: "";
   position: absolute;
-  left: -1.3rem;
+  left:-1.3rem;
   width: 0;
   height: 0;
-  border-top: 12px solid rgb(141, 222, 243);
+  border-top: 12px solid rgb(121, 239, 239);
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   transform: rotate(90deg);
@@ -78,52 +148,7 @@
   animation-delay: 2s;
 }
 
-.timeLineCardLeft:nth-child(1) {
-  animation-delay: 2s;
-}
 
-.timeLineCardRight:nth-child(1) {
-  animation-delay: 3s;
-}
-
-.timeLineCardLeft:nth-child(2) {
-  animation-delay: 4s;
-}
-.timeLineCardRight:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.timeLineCardLeft:nth-child(3) {
-  animation-delay: 6s;
-}
-.timeLineCardRight:nth-child(3) {
-  animation-delay: 7s;
-}
-.timeLineCardLeft:nth-child(4) {
-  animation-delay: 8s;
-}
-.timeLineCardRight:nth-child(4) {
-  animation-delay: 9s;
-}
-
-.timeLineCardLeft:nth-child(5) {
-  animation-delay: 10s;
-}
-.timeLineCardRight:nth-child(5) {
-  animation-delay: 11s;
-}
-.timeLineCardLeft:nth-child(6) {
-  animation-delay: 12s;
-}
-.timeLineCardRight:nth-child(6) {
-  animation-delay: 13s;
-}
-.timeLineCardLeft:nth-child(7) {
-  animation-delay: 14s;
-}
-.timeLineCardRight:nth-child(7) {
-  animation-delay: 15s;
-}
 
 @keyframes moveDown {
   0% {
@@ -163,17 +188,16 @@
 .timeLine {
   width: 0.5rem;
   height: 0rem;
-  background-color: rgba(27, 235, 165, 0.021);
   padding: 0 1px;
   border-radius: 2rem;
   margin-top: 5rem;
   z-index: 1;
-  animation: move 1s linear 0.2s forwards;
+  animation: move 5s linear 0.2s forwards;
 }
 
 @keyframes move {
   0% {
-    height: 0;
+    height: 20vh;
     opacity: 0;
   }
 
@@ -181,7 +205,7 @@
     height: inherit;
     opacity: 1;
 
-    background-color: rgba(8, 9, 9, 0.797);
+    background-color: rgba(19, 19, 19, 0.797);
   }
 }
 
@@ -204,7 +228,7 @@
   top: -1rem;
   z-index: 4;
   color: rgb(59, 59, 64);
-  animation: iconBlink 10s linear 1s;
+/*   animation: iconBlink 10s linear 1s; */
 }
 
 .iconLeft {
@@ -225,6 +249,8 @@
   color: rgb(59, 59, 64);
 }
 
+
+
 @media (max-width: 760px) {
   .workContainer {
     margin: 5rem auto;
@@ -236,6 +262,30 @@
     border-left: 2px solid;
 
     
+  }
+  .timeLine {
+    width: 0.5rem;
+    height: 0rem;
+    background-color: rgba(27, 235, 165, 0.021);
+    padding: 0 1px;
+    border-radius: 2rem;
+    margin-top: 5rem;
+    z-index: 1;
+    animation: move 1s linear 0.2s forwards;
+  }
+  
+  @keyframes move {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+  
+    100% {
+      height: inherit;
+      opacity: 1;
+  
+      background-color: rgba(8, 9, 9, 0.797);
+    }
   }
 
   .timeLineCardLeft,

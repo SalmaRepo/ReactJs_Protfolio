@@ -71,10 +71,11 @@ export default function WorkProvider({ children }) {
         description: "I was an above average student gaining good grades around 90% through out my Schooling",
       type:'study'},
   ];
-  const [scroll,setScroll]=useState(0);
+  const [animLeft,setAnimLeft]=useState(false);
+  const [animRight,setAnimRight]=useState(false);
 
   return (
-  <WorkContext.Provider value={{timeLineData,scroll,setScroll}}>
+  <WorkContext.Provider value={{timeLineData,animLeft,animRight,setAnimLeft,setAnimRight}}>
 
 {children}
   </WorkContext.Provider>
