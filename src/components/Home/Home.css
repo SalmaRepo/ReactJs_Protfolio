@@ -1,74 +1,181 @@
 .homeDesk {
-  height: 100vh;
+  margin: 5rem auto;
+  overflow-y: scroll;
   display: flex;
-  /* flex-wrap: wrap; */
- align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  overflow-y: auto;
-  
-  z-index: -1;
-  scroll-behavior: smooth;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  z-index: -2;
+  padding-top: 3rem;
+  height: 100vh;
+ 
+ 
 }
 
-#dark .homeDesk{
+#dark .HomeDesk {
   background-color: black;
-  color: white;
 }
-
 .homeImgDesk {
-  width: 40%;
-  height: 40rem;
-  position: absolute;
-  /* margin-top: 12rem; */
-  left: 4rem;   
- top:15rem;
+  width: 60%;
+  border: 2px solid white;
+  height: 12rem;
   object-fit: cover;
   object-position: top;
-  filter: drop-shadow(0 0 1rem rgb(213, 141, 159));
-
-  animation: img 6s ease 0.5s forwards;
-}
-
-.homeImgDesk:hover {
-  animation: img 5s ease 1s forwards;
+  z-index: 0;
+  border-radius: 50%;
+  animation: img 6s ease 0.5s infinite forwards;
 }
 
 @keyframes img {
   0% {
-    transform: translate(0rem, 0rem);
+    transform: translatey(0px);
+    background-color: rgb(240, 205, 248);
   }
-
+  50% {
+    transform: translatey(-20px);
+    background-color: rgb(241, 228, 210);
+  }
   100% {
-    transform: translate(2rem, -2rem);
+    transform: translatey(0px);
+    background-color: rgba(168, 242, 207, 0.728);
   }
 }
 
+.homeDesPara {
+  margin-bottom: 0rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
 .deskDesc {
-  font-size: 1.2rem;
-  width: 50%;
-  overflow: auto;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  top: 12rem;
-  padding: 1rem;
-  right: 0rem;
-  gap: 0rem;
-  
+  width: 80%;
 
-  /* background-color: rgba(240, 248, 255, 0.332); */
+  gap: 0rem;
+  padding: 1rem;
+
+  z-index: 0;
+  font-size: 1rem;
+  /*    background-color: rgba(255, 255, 255, 0.192); */
 }
 
 #dark .deskDesc {
-  background-color: none;
-}
-.nameDesk {
-  color: rgb(245, 17, 55);
+  /*  background-color: BLACK; */
 }
 
-.contactDesk {
+/* .contactDesk {
+  min-width: 50%;
+} */
+.hello {
+  font-size: 1.2rem;
+}
+
+.nameDesk {
+  font-size: 2rem;
+  color: rgb(251, 75, 104);
+}
+.webDev {
+  font-size: 2rem;
+}
+
+.hireMeAnim{
+  text-decoration: none;
+  
+}
+
+@media (min-width: 761px) {
+  .homeDesk {
+    display: flex;
+
+    width: 60%;
+    flex-direction: row;
+    height: 100vh;
+    gap: 2rem;
+    /*   margin: 2rem auto; */
+    margin: 2rem auto;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: -1;
+  }
+
+  #dark .homeDesk {
+    background-color: black;
+    color: white;
+  }
+
+  .homeImgDesk {
+    width: 20%;
+    height: 18rem;
+
+    /*   position: absolute;
+  left: 4rem;   
+ top:15rem; */
+
+    object-fit: cover;
+    display: inline;
+    border: 5px solid rgb(234, 185, 192);
+    border-radius: 50%;
+    position: relative;
+
+    /*  filter: drop-shadow(0 0 1rem rgb(213, 141, 159)); */
+
+    animation: img 6s ease 0.5s infinite forwards;
+  }
+
+  @keyframes img {
+    0% {
+      transform: translatey(0px);
+      background-color: rgb(240, 205, 248);
+    }
+    50% {
+      transform: translatey(-20px);
+      background-color: rgb(241, 228, 210);
+    }
+    100% {
+      transform: translatey(0px);
+      background-color: rgba(168, 242, 207, 0.728);
+    }
+  }
+
+  .homeDesPara {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .hireMeAnim {
+    animation: hire 0.5s ease 0.5s 3;
+  }
+
+  @keyframes hire {
+    100% {
+      transform: translateY(-1rem);
+    }
+  }
+
+  .deskDesc {
+   
+    font-size: 1.5rem;
+    /*     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; */
+    padding: 1rem;
+
+    gap: 0rem;
+
+    /* background-color: rgba(240, 248, 255, 0.332); */
+  }
+
+  #dark .deskDesc {
+    background-color: none;
+  }
+  .nameDesk {
+    color: rgb(251, 75, 104);
+    font-size: 4rem;
+  }
+
+  /* .contactDesk {
   background-color: rgba(14, 14, 14, 0.881);
   max-width: 30%;
   color: white;
@@ -77,85 +184,28 @@
   border-radius: 2rem;
   font-weight: bold;
   margin-top: 2rem;
-}
+} */
 
-#dark .contactDesk {
-  background-color: rgb(241, 235, 236);
-  color: rgb(16, 16, 16);
-}
-
-.hello {
-  font-size: 2rem;
-}
-
-.name {
-  font-size: 4rem;
-}
-
-.webDev {
-  font-size: 5rem;
-}
-
-@media screen and (max-width: 761px) {
-  .homeDesk {
-   height: 100vh;
-    margin: 5rem auto;
- 
-    
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    z-index: -2;
-    
-   
-  }
-
-  #dark .HomeDesk{
-    background-color: black;
-  }
-  .homeImgDesk {
-    width: 60%;
-    height: 18rem;
-    left: 0rem;
-    right: 0;
-    top: 25rem;
-    object-fit: cover;
-    object-position: top;
-    z-index: 0;
-   
-  }
-  .deskDesc {
-    min-width: 80%;
-    right: 0;
-    top: 5rem;
-    padding: 1rem;
-    left: 1rem;
-    padding: 0;
- z-index: 0;
-    font-size: 1rem;
-/*    background-color: rgba(255, 255, 255, 0.192); */
-  }
-
-  #dark .deskDesc {
-   /*  background-color: BLACK; */
-  }
-
-
- 
-
-  .contactDesk {
-    min-width: 50%;
+  #dark .contactDesk {
+    background-color: rgb(241, 235, 236);
+    color: rgb(16, 16, 16);
   }
 
   .hello {
-    font-size: 1.2rem;
+    font-size: 2rem;
+  }
+
+  .hireMeAnim {
+    width: 20%;
+    font-size: 2rem;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 4rem;
+    
   }
+
   .webDev {
-    font-size: 2rem;
+    font-size: 5rem;
   }
 }

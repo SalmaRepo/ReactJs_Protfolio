@@ -12,14 +12,18 @@ import WorkProvider from "./components/Work/workContexts/WorkProvider";
 import { MainContext } from "./contexts/MainContext/mainContext";
 import { ThemeContext } from "./contexts/ThemeContext/contextTheme";
 import MainContextProvider from "./contexts/MainContext/MainContextProvider";
+import LandingPage from "./components/LandingPage/LandingPage";
 
 function App() {
   const {   mount,setMount,theme, setTheme, toggleTheme } =
     useContext(ThemeContext);
+  
+    const [landing,setLanding]=useState(true)
 
   console.log(mount);
   useEffect(() => {
     setMount(true);
+    setInterval(()=>setLanding(false),4000)
   }, []); 
 
   const projects = [
@@ -115,17 +119,20 @@ function App() {
 
 
         {mount && (
-          <div>
+          
+            landing?<LandingPage/>:
+            <div>
             <Header toggleTheme={toggleTheme} theme={theme} />
             <Home/>
               <About />
               <WorkProvider>
               <Work />
             </WorkProvider>
-            <Contact />
-          </div>
+            <Contact /> 
+            </div>
+         
         )}
-      </div>
+     </div>
     </MainContextProvider>
   );
 }

@@ -62,6 +62,37 @@
   
 }
 
+.headerNav{
+ color: black;
+ font-weight:light;
+
+}
+
+.headerNav:hover{
+  border-bottom: 2px solid black;
+}
+
+#dark .headerNav:hover{
+  border-bottom: 2px solid white;
+}
+
+.headerNavContact{
+  background-color: rgb(251, 75, 104);
+  color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px gray;
+    border: none;
+    width: 10%;
+    text-align: center;
+}
+
+.headerNavContact:hover{
+  background-color: rgba(235, 199, 144, 0.297);
+  color:black;
+}
+
+
 /* #light .Theme::before {
   content: "";
   position: absolute;

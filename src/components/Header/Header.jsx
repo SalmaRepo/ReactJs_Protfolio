@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import "./Header.css";
 import Home from "../Home/Home";
@@ -86,16 +85,23 @@ export default function Header() {
 {deskDisplay && (
             <ul className={`${navClass()}`}>
               <li>
-                <a href="#Home">Home</a>
+                <a className="headerNav" href="#Home">Home</a>
               </li>
               <li>
-              <a href="#About">About</a>
+              <a className="headerNav" href="#About">About</a>
               </li>
               <li>
-              <a href="#Work">Work</a>
+              <a className="headerNav" href="#Work">Work</a>
               </li>
               <li>
-              <a href="#Contact">Contact</a>
+              <a className="headerNav headerNavContact" href="#Contact">Contact</a>
+              </li>
+              <li>
+                <div>
+                <a className="headerNav" href="#Contact">EN  |</a>
+                <a className="headerNav" href="#Contact">  GE </a>
+                </div>
+           
               </li>
             </ul>
           )}
@@ -109,16 +115,16 @@ export default function Header() {
                 }}
               ></i>
               <li>
-                <a href="#Home">Home</a>
+                <a className="headerNav" href="#Home">Home</a>
               </li>
               <li>
-              <a href="#About">About</a>
+              <a className="headerNav" href="#About">About</a>
               </li>
               <li>
-              <a href="#Work">Work</a>
+              <a className="headerNav" href="#Work">Work</a>
               </li>
               <li>
-              <a href="#Contact">Contact</a>
+              <a className="headerNav" href="#Contact">Contact</a>
               </li>
             </ul>
           )}

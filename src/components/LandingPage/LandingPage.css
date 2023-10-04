@@ -1,0 +1,84 @@
+.landingPage{
+    font-size: 5rem;
+    font-family: italic;
+    color: rgb(237, 88, 187);
+    animation: landingName 2s ease 2s forwards ;
+    position: absolute;
+    bottom: 0rem;
+  
+
+}
+
+.landingPageContainer{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    z-index: 600;
+}
+
+.landingPageLeft{
+    width: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    background-color: yellow;
+    height: 100%;
+    animation: landingLeft 1s linear 1.5s forwards;
+}
+
+.landingPageRight{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(255, 0, 115);
+    border: 2px solid red;
+    height: 100%;
+    animation: landingLeft 1s linear 1.5s forwards;
+}
+
+.landingLine{
+    width: 0.2%;
+    height: 50%;
+    background-color: rgb(247, 115, 115);
+    position: absolute;
+    bottom: 0;
+    animation: landingLine 3s linear 1s forwards;
+}
+
+@keyframes landingLine{
+    0%{
+        height: 50%;
+        opacity: 1;
+        
+    }
+    100%{
+        height:0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes landingName{
+     0%{
+      bottom: 0;
+     }
+     100%{
+        bottom: 25rem;
+     }
+  
+}
+
+
+@keyframes landingLeft{
+    0%{
+        opacity: 0;
+        width: 50%;
+    }
+    100%{
+       width: 0;
+    }
+}

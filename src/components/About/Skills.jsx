@@ -1,61 +1,99 @@
-import {useState,useEffect} from 'react'
-export default function Skills() {
-    const [animateSkills,setAnimateSkills]=useState(false);
-    console.log(animateSkills);
+import { useState, useEffect } from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 
-    useEffect(()=>{
-        window.addEventListener('scroll',(e)=>{
-            if(window.scrollY>1200){
-                setAnimateSkills(true)
-            }
-           })
-    },[])
-    
+ChartJS.register(ArcElement, Tooltip, Legend);
+export default function Skills() {
+  const [animateSkills, setAnimateSkills] = useState(false);
+  console.log(animateSkills);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      if (window.scrollY > 1200) {
+        setAnimateSkills(true);
+      }
+    });
+  }, []);
+
+  const skillsData = {
+    TechnicalSkills: [
+      { skill: "HTML", percent: "90%", animName: "htmlSkillBar" },
+      { skill: "CSS", percent: "90%", animName: "cssSkillBar" },
+      { skill: "JavaScript", percent: "80%", animName: "jsSkillBar" },
+      { skill: "React", percent: "65%", animName: "reactSkillBar" },
+      { skill: "Python", percent: "50%", animName: "pythonSkillBar" },
+     
+    ],
+
+    LanguageSkills: [
+      { skill: "English", percent: "90%", animName: "englishSkillBar" },
+      { skill: "Deutsch", percent: "60%", animName: "germanSkillBar" },
+    ],
+  };
+
   return (
     <div className="skillsSectionContainer">
-      <h2>My Skills</h2>
+      <h2 className="skillsHead">My Skills</h2>
       <div className="skillsSection">
-     
         <div className="skillsTechnicalContainer">
-            <h2>Technical Skills</h2>
-          <div className="technicalSkillsCard">
-            <div className="technicalSkillType">
-              <p>HTML</p>
-              <p>90%</p>
-            </div>
-            <div className={`${animateSkills && 'htmlSkillBar'} skillBar`}></div>
-          </div>
-          <div className="technicalSkillsCard">
-            <div className="technicalSkillType">
-              <p>CSS</p>
-              <p>90%</p>
-            </div>
-            <div className={`${animateSkills && 'cssSkillBar'} skillBar`}></div>
-          </div>
-          <div className="technicalSkillsCard">
-            <div className="technicalSkillType">
-              <p>JavaScript</p>
-              <p>80%</p>
-            </div>
-            <div className={`${animateSkills && 'jsSkillBar'} skillBar`}></div>
-          </div>
-          <div className="technicalSkillsCard">
-            <div className="technicalSkillType">
-              <p>React</p>
-              <p>65%</p>
-            </div>
-            <div className={`${animateSkills && 'reactSkillBar'} skillBar`}></div>
-          </div>
-          <div className="technicalSkillsCard">
-            <div className="technicalSkillType">
-              <p>Python</p>
-              <p>50%</p>
-            </div>
-            <div className={`${animateSkills && 'pythonSkillBar'} skillBar`}></div>
+          <h2 className="skillsHead">Technical Skills</h2>
+          {skillsData.TechnicalSkills.map((type) => {
+            return (
+              <div className="technicalSkillsCard" key={type.id}>
+                <div className="technicalSkillType">
+                  <p className="skillName">{type.skill}</p>
+                  <p className="skillName">{type.percent}</p>
+                </div>
+                <div
+                  className={`${animateSkills && type.animName} skillBar`}
+                ></div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="skillsLanguageContainer">
+          <h2 className="skillsHead">Language Skills</h2>
+          <div className="languageSkillsSection">
+            {skillsData.LanguageSkills.map((type) => {
+              return (
+                <div className="LanguageSkillsCard" key={type.id}>
+                  <div className="LanguageSkillType">
+                    <p className="skillName">{type.skill}</p>
+                 
+                  </div>
+                  <div
+                    className={`${
+                      animateSkills && type.animName
+                    } circleSkillBar`}
+                  >
+                    <div className="innerCircle">
+                      <div id="number">{type.percent}</div>
+                    </div>
+
+                    {animateSkills&&<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="160px"
+                      height="160px"
+                    >
+                      <defs>
+                        <linearGradient id="GradientColor">
+                          <stop offset="0%" stop-color="#85ebee" />
+                          <stop offset="100%" stop-color="#673ab7" />
+                        </linearGradient>
+                      </defs>
+                      {type.animName==='englishSkillBar'&&<circle cx="80" cy="80" r="70" stroke-linecap="round" class='englishCircle' 
+                    />}
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round"  class='germanCircle'
+                    />
+                    </svg>}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="skillsProfessionalContainer"></div>
-        <div className="skillsLanguageContainer"></div>
       </div>
     </div>
   );
