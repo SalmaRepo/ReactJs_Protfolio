@@ -62,18 +62,39 @@
   
 }
 
-.headerNav{
+.navbar .headerNav{
  color: black;
  font-weight:light;
+ background: none;
 
 }
+
+.navbar .headerNavMobil{
+  color: black;
+  font-weight:light;
+  background: none;
+  margin: 0 ;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+ 
+ }
 
 .headerNav:hover{
   border-bottom: 2px solid black;
 }
+.headerNavMobil:hover{
+  border-bottom: none;
+}
 
 #dark .headerNav:hover{
   border-bottom: 2px solid white;
+}
+#dark .headerNavMobil:hover{
+  border-bottom: none;
 }
 
 .headerNavContact{
@@ -123,25 +144,48 @@
   font-size: 1.5rem;
   font-weight: 900;
 }
-.navLinksMobil {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  justify-content: center;
+.navbar .navLinksMobil {
+  display: flex; 
+  flex-wrap: wrap;
+  list-style: none; 
   align-items: center;
-  gap: 1rem;
-  position: absolute;
-  top: 4rem;
+  justify-content: space-between;
+  gap: 0.4rem;
+ position: fixed;
+  bottom: 0rem;
+  left: 0;
   font-size: 1.2rem;
-  right: -3rem;
-  z-index: 100;
-  width: 60%;
-  background-color: rgba(40, 40, 38, 0.55);
-  border-radius: 1rem;
-  padding: 1rem 0;
-  border: 2px solid;
+  z-index: 500;
+  height: 8rem; 
+  margin: 0 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  background-color: white;
+  
   animation: mobilNav 0.5s ease 0.2s forwards;
 }
+
+.navbar .navLinksMobil i{
+  font-size: 1.4rem;
+  color: rgba(251, 75, 104, 0.518);;
+}
+
+.navbar .navLinksMobil .navName{
+  font-size: 0.8rem;
+  margin: 0 auto;
+  width: 100%;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+#dark .navbar .navLinksMobil{
+  background-color: rgb(5, 5, 5);
+}
+
+#dark .navbar .navLinksMobil i{
+  color: gray;
+}
+
 
 @keyframes mobilNav {
   0% {

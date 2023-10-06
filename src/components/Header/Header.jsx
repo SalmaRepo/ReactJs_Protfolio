@@ -12,6 +12,19 @@ export default function Header() {
   const [deskDisplay, setDeskDisplay] = useState(true);
   const [close, setClose] = useState(true);
 
+
+
+  useEffect(() => {
+   
+      if (window.innerWidth < 760) {
+        setDeskDisplay(false);
+        setDisplay(true);
+      }
+    
+  }, []);
+
+  console.log(deskDisplay)
+
   function barsClass() {
     let className = "";
     if (display) {
@@ -28,14 +41,7 @@ export default function Header() {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth < 760) {
-        setDeskDisplay(false);
-        setDisplay(!display);
-      }
-    });
-  }, []);
+ 
 
   return (
     <div>
@@ -97,7 +103,7 @@ export default function Header() {
               <a className="headerNav headerNavContact" href="#Contact">Contact</a>
               </li>
               <li>
-                <div>
+               <div>
                 <a className="headerNav" href="#Contact">EN  |</a>
                 <a className="headerNav" href="#Contact">  GE </a>
                 </div>
@@ -106,28 +112,30 @@ export default function Header() {
             </ul>
           )}
 
-{display && (
-            <ul className={`${navClass()}`}>
-              <i
+
+            {display&&<ul className={`${navClass()}`}>
+            {/*   <i
                 className="fa-solid fa-xmark"
                 onClick={() => {
                   setDisplay(false);
                 }}
-              ></i>
+              ></i> */}
               <li>
-                <a className="headerNav" href="#Home">Home</a>
+                <a className="headerNavMobil" href="#Home"><i className="fa-solid fa-house"></i><p className="navName">Home</p></a>
               </li>
               <li>
-              <a className="headerNav" href="#About">About</a>
+              <a className="headerNavMobil" href="#About"><i className="fa-solid fa-user"></i><p className="navName">About</p></a>
               </li>
               <li>
-              <a className="headerNav" href="#Work">Work</a>
+              <a className="headerNavMobil" href="#Work"><i className="fa-solid fa-briefcase"></i><p className="navName">Work</p></a>
               </li>
               <li>
-              <a className="headerNav" href="#Contact">Contact</a>
+              <a className="headerNavMobil" href="#Contact"><i className="fa-solid fa-envelope"></i><p className="navName">Contact</p></a>
               </li>
-            </ul>
-          )}
+            </ul>}
+          
+
+
 
           <button className="Theme" onClick={()=>toggleTheme()}>
             {theme === "dark" ? (
@@ -137,7 +145,7 @@ export default function Header() {
             )}
           </button>
 
-          <i
+       {/*    <i
             className={`fa-solid fa-bars ${barsClass()}`}
             onClick={() => {
               setDisplay(!display);
@@ -146,7 +154,7 @@ export default function Header() {
             }}
           >
           
-          </i>
+          </i> */}
         </div>
       </nav>
     </div>

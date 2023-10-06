@@ -82,14 +82,14 @@ function getRandomColor() {
           <h1 className="name">
             I'm <span className="nameDesk">Salma Sheik</span>
           </h1>
-          <h2 className="webDev">Front-End Developer with <span style={{color:getRandomColor()}}>{`{${techDisp}}`}</span> <span style={{color:getRandomColor()}}>!</span></h2>
+          <h2 className="webDev">Front-End Developer with <span  style={{color:getRandomColor(),fontWeight:'lighter'}}>{`{${techDisp}}`}</span> <span className="cursorHome" style={{color:getRandomColor()}}>|</span></h2>
           <p className="homeDesPara">
             A passionate Fresher aiming to develop beautiful and highly
             functionalWeb Sites with all the knowledge I gained since past few
             years. Have alook at my Profile !!
           </p>
 
-          <a className="headerNavContact hireMeAnim" href="#Contact">Hire me!</a>
+          <a className="hireMeAnim" href="#Contact"><i className="fa-solid fa-earth-europe"></i> Open to Work.</a>
         </div>
       </div>
 

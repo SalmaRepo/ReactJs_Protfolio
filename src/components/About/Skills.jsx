@@ -26,8 +26,8 @@ export default function Skills() {
     ],
 
     LanguageSkills: [
-      { skill: "English", percent: "90%", animName: "englishSkillBar" },
-      { skill: "Deutsch", percent: "60%", animName: "germanSkillBar" },
+      { skill: "English", percent: "C1", animName: "englishSkillBar" },
+      { skill: "Deutsch", percent: "B1", animName: "germanSkillBar" },
     ],
   };
 
@@ -42,7 +42,7 @@ export default function Skills() {
               <div className="technicalSkillsCard" key={type.id}>
                 <div className="technicalSkillType">
                   <p className="skillName">{type.skill}</p>
-                  <p className="skillName">{type.percent}</p>
+                  {/* <p className="skillName">{type.percent}</p> */}
                 </div>
                 <div
                   className={`${animateSkills && type.animName} skillBar`}
