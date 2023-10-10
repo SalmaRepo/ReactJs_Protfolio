@@ -21,13 +21,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 auto;
+
   gap: 2rem;
 
   margin-top: 1rem;
   position: relative;
-  padding: 1rem;
-  border: 1px solid;
+  
+
 }
 
 #dark .projectContainer {
@@ -261,6 +261,7 @@ svg{
     box-shadow: 2px 2px 6px 2px gray;
     overflow-x: auto;
     gap: 1rem;
+    border: 1px solid;
     margin-top: 1rem;
     position: relative;
     padding: 2rem;

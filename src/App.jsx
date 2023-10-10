@@ -13,6 +13,7 @@ import { MainContext } from "./contexts/MainContext/mainContext";
 import { ThemeContext } from "./contexts/ThemeContext/contextTheme";
 import MainContextProvider from "./contexts/MainContext/MainContextProvider";
 import LandingPage from "./components/LandingPage/LandingPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const {   mount,setMount,theme, setTheme, toggleTheme } =
@@ -23,7 +24,7 @@ function App() {
   console.log(mount);
   useEffect(() => {
     setMount(true);
-    setInterval(()=>setLanding(false),4000)
+    setInterval(()=>setLanding(false),3000)
   }, []); 
 
   const projects = [
@@ -120,7 +121,7 @@ function App() {
 
         {mount && (
           
-            landing?<LandingPage/>:
+            landing? <LandingPage/>:
             <div>
             <Header toggleTheme={toggleTheme} theme={theme} />
             <Home/>
@@ -129,6 +130,7 @@ function App() {
               <Work />
             </WorkProvider>
             <Contact /> 
+           
             </div>
          
         )}

@@ -33,7 +33,7 @@ export default function Work() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
+     
       if (window.scrollY > 1000 || window.scrollY > 2000) {
         setAnimLeft(true);
         setAnimRight(true);
@@ -48,10 +48,10 @@ export default function Work() {
         I completed my graduation in 2015 and worked in many roles since
         then.Following Timeline will give you the brief description of my Jobs
         and my Studies. You can also download my Resume in pdf versions in both English and Deutsch for more details.{" "}
-        <a className="resume" href=".English Resume 8.2022.pdf" download>
+        <a className="resume" href="Salma Front End English Resume.pdf" download>
           English Resume <i class="fa-solid fa-down-long"></i>
         </a>
-        <a className="resume" href=".English Resume 8.2022.pdf" download>
+        <a className="resume" href="Salma Front End Deutsch Resume.pdf" download>
           Deutsch Resume <i class="fa-solid fa-down-long"></i>
         </a>
       </p>

@@ -9,6 +9,7 @@ export default function MainContextProvider({ children }) {
   const [showContact, setShowContact] = useState(false);
 
   const [like, setLike] = useState(false);
+  const [likeId,setLikeId]=useState("");
   const projects = [
     {
       id: 0,
@@ -16,7 +17,7 @@ export default function MainContextProvider({ children }) {
       gitLink: "https://salmarepo.github.io/Calculator/",
       description: [
         { title: "Calculator" },
-        { code: "link" },
+        { code: "https://github.com/SalmaRepo/Calculator" },
         { codeStack: "Html,CSS,JavaScript" },
         {
           brief:
@@ -30,7 +31,7 @@ export default function MainContextProvider({ children }) {
       gitLink: "https://salmarepo.github.io/Age-Calculator/",
       description: [
         { title: "Age-Calculator" },
-        { code: "link" },
+        { code: "https://github.com/SalmaRepo/Age-Calculator" },
         { codeStack: "Html,CSS,JavaScript" },
         {
           brief:
@@ -43,32 +44,44 @@ export default function MainContextProvider({ children }) {
       title: "Rock-Paper-Scissor",
       gitLink: "https://salmarepo.github.io/Rock-Paper-Scissor-Game/",
       description: [
-        { title: "hello" },
-        { code: "link" },
+        { title: "Rock-Paper-Scissor" },
+        { code: "https://github.com/SalmaRepo/Rock-Paper-Scissor-Game" },
         { codeStack: "Html,CSS,JavaScript" },
-        { brief: "adshcbadhvcdhavcdahnmhgmhgvgmgmgmgjmc" },
+        { brief: "Simple yet Tricky to code Rock paper scissor Game lets you play against computer and displays your win based on the score" }
       ],
     },
     {
       id: 3,
-      title: "Shopping Cart",
-      gitLink: "https://salmarepo.github.io/Rock-Paper-Scissor-Game/",
+      title: "Shopping_Cart",
+      gitLink: "https://shopping-cart-react-j4egt187y-salmarepo.vercel.app/",
       description: [
-        { title: "hello" },
-        { code: "link" },
-        { codeStack: "Html,CSS,JavaScript" },
-        { brief: "adshcbadhvcdhavcdahnmhgmhgvgmgmgmgjmc" },
+        { title: "Shopping Cart" },
+        { code: "https://github.com/SalmaRepo/Shopping_Cart_React" },
+        { codeStack: "Xml,CSS,JavaScript,React" },
+        { brief: "This project replicates the shopping cart of an e-commerce application, filters the products based on size,Built in team, I contributed to majority of coding" },
       ],
     },
     {
       id: 4,
-      title: "Weather App",
-      gitLink: "https://salmarepo.github.io/Rock-Paper-Scissor-Game/",
+      title: "Movie_Search",
+      gitLink: "https://movie-search-dh3add45u-salmarepo.vercel.app/",
       description: [
-        { title: "hello" },
-        { code: "link" },
-        { codeStack: "Html,CSS,JavaScript" },
-        { brief: "adshcbadhvcdhavcdahnmhgmhgvgmgmgmgjmc" },
+        { title: "Movie_Search" },
+        { code: "https://github.com/SalmaRepo/Movie_Search" },
+        { codeStack: "Xml,CSS,JavaScript,REACT" },
+        { brief: "A simple project based on movie API fetch, lets you search for any movie, displays movie banner, release date and title " },
+      ],
+    },
+
+    {
+      id: 5,
+      title: "Expenses_Tracker",
+      gitLink: "https://expenses-i0pigovs7-salmarepo.vercel.app/",
+      description: [
+        { title: "Expenses_Tracker" },
+        { code: "https://github.com/SalmaRepo/Expenses-React-App" },
+        { codeStack: "Xml,CSS,JavaScript,ReactJs" },
+        { brief: "Group Project with a dummy User Login Page, lets you track daily expenses and incomes and also displays History of individual Spendings on daily basis based" },
       ],
     },
   ];
@@ -89,6 +102,8 @@ export default function MainContextProvider({ children }) {
         setShowAbout,
         showContact,
         setShowContact,
+        likeId,
+        setLikeId
        
       }}
     >

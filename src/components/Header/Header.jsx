@@ -9,28 +9,35 @@ import { ThemeContext } from "../../contexts/ThemeContext/contextTheme";
 export default function Header() {
   const {toggleTheme,theme}=useContext(ThemeContext);
   const [display, setDisplay] = useState(false);
-  const [deskDisplay, setDeskDisplay] = useState(true);
+  const [deskDisplay, setDeskDisplay] = useState(window.innerWidth >760);
   const [close, setClose] = useState(true);
-
 
 
   useEffect(() => {
    
-      if (window.innerWidth < 760) {
-        setDeskDisplay(false);
-        setDisplay(true);
-      }
-    
+const test = ()=>{
+
+if(window.innerWidth <=760){
+  setDeskDisplay(false)
+} else if(window.innerWidth >760){
+  setDeskDisplay(true)
+}
+
+}
+window.addEventListener("resize", test)
+
+      
+  return ()=>  window.removeEventListener("resize", test) 
   }, []);
 
-  console.log(deskDisplay)
-
+  
+/* 
   function barsClass() {
     let className = "";
     if (display) {
       return (className = `barsAnim`);
     }
-  }
+  } */
 
   function navClass() {
     let className = "";
@@ -46,50 +53,12 @@ export default function Header() {
   return (
     <div>
       <nav className="navbar">
-        <div className="logo">{`{S.S}`}</div>
+        <div className="logo">{`{SS}`}</div>
         <div className="deskNav">
-{/*           {deskDisplay && (
-            <ul className={`${navClass()}`}>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/work">Work</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          )}
 
-          {display && (
-            <ul className={`${navClass()}`}>
-              <i
-                className="fa-solid fa-xmark"
-                onClick={() => {
-                  setDisplay(false);
-                }}
-              ></i>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/work">Work</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          )} */}
 
-{deskDisplay && (
-            <ul className={`${navClass()}`}>
+{deskDisplay ? (
+            <ul className='navLinks'>
               <li>
                 <a className="headerNav" href="#Home">Home</a>
               </li>
@@ -103,23 +72,32 @@ export default function Header() {
               <a className="headerNav headerNavContact" href="#Contact">Contact</a>
               </li>
               <li>
-               <div>
+               {/* <div>
                 <a className="headerNav" href="#Contact">EN  |</a>
                 <a className="headerNav" href="#Contact">  GE </a>
-                </div>
+                </div> */}
            
               </li>
             </ul>
-          )}
+          ): <ul className='navLinksMobil'>
+           
+          <li>
+            <a className="headerNavMobil" href="#Home"><i className="fa-solid fa-house"></i><p className="navName">Home</p></a>
+          </li>
+          <li>
+          <a className="headerNavMobil" href="#About"><i className="fa-solid fa-user"></i><p className="navName">About</p></a>
+          </li>
+          <li>
+          <a className="headerNavMobil" href="#Work"><i className="fa-solid fa-briefcase"></i><p className="navName">Work</p></a>
+          </li>
+          <li>
+          <a className="headerNavMobil" href="#Contact"><i className="fa-solid fa-envelope"></i><p className="navName">Contact</p></a>
+          </li>
+        </ul> }
 
 
-            {display&&<ul className={`${navClass()}`}>
-            {/*   <i
-                className="fa-solid fa-xmark"
-                onClick={() => {
-                  setDisplay(false);
-                }}
-              ></i> */}
+         {/*    {display&&<ul className={`${navClass()}`}>
+           
               <li>
                 <a className="headerNavMobil" href="#Home"><i className="fa-solid fa-house"></i><p className="navName">Home</p></a>
               </li>
@@ -132,7 +110,7 @@ export default function Header() {
               <li>
               <a className="headerNavMobil" href="#Contact"><i className="fa-solid fa-envelope"></i><p className="navName">Contact</p></a>
               </li>
-            </ul>}
+            </ul>} */}
           
 
 

@@ -1,0 +1,25 @@
+.footer{
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    bottom:1rem;
+    z-index: 800;
+    padding: 1rem;
+    width: 100%;
+    font-size: 0.8rem;
+    font-size: 0.5rem;
+    
+}
+
+#dark .footer{
+    color: white;
+}
+
+@media (min-width:760px) {
+    .footer{
+        font-size: 1rem;
+    }
+    
+}
+

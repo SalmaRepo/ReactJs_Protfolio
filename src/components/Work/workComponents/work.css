@@ -26,7 +26,7 @@
   padding: 0;
   display: inline-block;
   text-decoration: none;
-  background-color: aliceblue;
+/*   background-color: aliceblue; */
   border: 1px solid;
   border-radius: 2rem;
   padding: 0.5rem;
@@ -40,11 +40,11 @@
 }
 
 #dark .resume{
-  color: black;
+  color: rgb(242, 239, 239);
 }
 
 #dark .resume:hover{
-  color: white;
+  color: rgb(33, 193, 214);
 }
 
 .workTimeLineContainer {
@@ -225,9 +225,21 @@
 
 .timeLineCardRightContainer .fa-briefcase,
 .timeLineCardRightContainer .fa-graduation-cap {
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: rgba(148, 200, 240, 0.825);
-  padding: 1rem;
+  width: 4.5rem;
+  padding:1rem 0.8rem;
+  border-radius: 50%;
+  
+  border: 5px solid rgb(92, 89, 89);
+}
+
+.timeLineCardLeftContainer .fa-briefcase,
+.timeLineCardLeftContainer .fa-graduation-cap {
+  font-size: 2rem;
+  background-color: rgba(148, 200, 240, 0.825);
+  width: 4.5rem;
+  padding:1rem 0.8rem;
   border-radius: 50%;
   
   border: 5px solid rgb(92, 89, 89);
@@ -370,7 +382,7 @@
   .timeLineCardLeftContainer {
     align-items: flex-start;
    margin-top: 5rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
     gap: 30rem;
   }
   .timeLineCardRightContainer {
@@ -378,8 +390,39 @@
     left: -2rem;
     margin-top: 26rem;
     gap: 30rem;
+  
+
    
   }
+
+
+
+
+
+
+
+.timeLineCardRightContainer .fa-briefcase,
+.timeLineCardRightContainer .fa-graduation-cap {
+  font-size: 2rem;
+  background-color: rgba(148, 200, 240, 0.825);
+  width:4rem;
+  padding: 0.2rem 0.5rem;
+
+  border-radius: 50%;
+  
+  border: 5px solid rgb(92, 89, 89);
+}
+
+.timeLineCardLeftContainer .fa-briefcase,
+.timeLineCardLeftContainer .fa-graduation-cap {
+  font-size: 2rem;
+  background-color: rgba(148, 200, 240, 0.825);
+  width:4rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  
+  border: 5px solid rgb(92, 89, 89);
+}
 
   .timeLineCardLeft:before {
     left: -1.3rem;

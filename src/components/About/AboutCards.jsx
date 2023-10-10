@@ -13,6 +13,9 @@ export default function AboutCards() {
     projectId,
     setLike,
     like,
+  
+    likeId,
+    setLikeId,
   } = useContext(MainContext);
 
   const scroll = useRef();
@@ -22,7 +25,7 @@ export default function AboutCards() {
       <div
         className="scrollerLeft"
         onClick={() => {
-          scroll.current.scrollLeft -= 500;
+          scroll.current.scrollLeft -= 50;
         }}
       >
         <i className="fa-solid fa-chevron-left"></i>
@@ -31,7 +34,7 @@ export default function AboutCards() {
         {projects.map((project) => {
           return (
             <div key={project.id} id={project.id} className="projectCardStyle">
-              <a href={project.gitLink} className="imageLink">
+              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="imageLink">
                 <img
                   src={`./${project.title}.jpg`}
                   className="projectImageSize"
@@ -39,7 +42,7 @@ export default function AboutCards() {
                 />
               </a>
 
-              <a href={project.gitLink}></a>
+
 
               {project.id == projectId && projectDescDisplay && (
                 <ProjectDescription />
@@ -53,6 +56,7 @@ export default function AboutCards() {
                   if (e.target.parentElement.id === `${project.id}`) {
                     setProjectDescDisplay(true);
                     setProjectId(e.target.parentElement.id);
+                    
                   }
                 }}
                 onMouseOut={(e) => {
@@ -60,7 +64,8 @@ export default function AboutCards() {
                     setTimeout(() => {
                       setProjectDescDisplay(false);
                       setProjectId(e.target.parentElement.id);
-                    }, 5000);
+                      
+                    }, 10000);
                   }
                 }}
               >
@@ -75,7 +80,7 @@ export default function AboutCards() {
       <div
           className="scrollerRight"
           onClick={() => {
-            scroll.current.scrollLeft += 500;
+            scroll.current.scrollLeft += 70;
           }}
         >
           <i className="fa-solid fa-chevron-right"></i>

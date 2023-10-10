@@ -17,7 +17,7 @@ export default function ProjectDescription() {
   console.log(projectDisp);
   let finalDescription = projectDisp.description;
   console.log(finalDescription);
-
+console.log(finalDescription[1].code)
   return (
     <div className="projectDescCard"  id={projectId}>
       {finalDescription.map((desc) => {
@@ -29,6 +29,7 @@ export default function ProjectDescription() {
           </div>
         );
       })}
+      <button className="closeProjectDesc" onClick={()=>setProjectDescDisplay(false)}>x</button>
 
       <CodeButton code={finalDescription[1].code}/>
     </div>

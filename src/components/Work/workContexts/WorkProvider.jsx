@@ -56,7 +56,7 @@ export default function WorkProvider({ children }) {
         skills: "Problem Solving Skills, Analytical Skills, Quick Decision Making Skills, LIstening Skills, Communication Skills",
         description: "Solved the problems of many Customers by finding the qick and efficient solution to customers issues through verbal communication and handled more than 1000 customer enquiries about their Order status, returns and refunds",
       type:'work'},
-      {
+     /*  {
         id:'W-7', 
         title: "Bachelor of Technology in Electronics and Telecommunications",
         duration: 'June 2011-July 2015',
@@ -69,7 +69,7 @@ export default function WorkProvider({ children }) {
         duration: '2000-July 2011',
         skills: "All the Skills required to reach Graduation",
         description: "I was an above average student gaining good grades around 90% through out my Schooling",
-      type:'study'},
+      type:'study'}, */
   ];
   const [animLeft,setAnimLeft]=useState(false);
   const [animRight,setAnimRight]=useState(false);

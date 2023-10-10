@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
+import Footer from "../Footer/Footer";
 
 export default function Contact() {
   const form = useRef();
@@ -29,9 +30,12 @@ export default function Contact() {
     setSent(!sent);
   };
   return (
+    <div className='contactContainer'>
+
+   
     <div className="contactSection" id="Contact">
       {!sent&&<form ref={form} className="form" onSubmit={sendEmail}>
-        <h2 className="formHead">Contact Me by dropping a Message.</h2>
+        <h2 className="formHead">Contact Me</h2>
         <label>Name</label>
         <input type="text"  className='input message' name="user_name" placeholder="John Deer" />
         <label>Email</label>
@@ -46,6 +50,7 @@ export default function Contact() {
         <input type="submit" className='formSubmit' value="Send" />
       </form>}
 
+      <div className="successContainer">
       {sent && (
         <div className="success">
           <div class="success-checkmark">
@@ -57,12 +62,23 @@ export default function Contact() {
             </div>
           </div>
 
-          <h1>Message Sent!</h1>
+          <h1 className="messageContact">Message Sent!</h1>
     
         </div>
       )}
 
-    {sent&&<button className="formSubmitSent" onClick={()=>setSent(false)}>send again</button>}
+    {sent&&<button className="formSubmitSent" onClick={()=>setSent(false)}>Send More</button>}
+      </div>
+
+     
+
+    <div className="contactLinks">
+      <a href="https://github.com/SalmaRepo" className="contactLink"><i class="fa-brands fa-github"></i></a>
+      <a href="www.linkedin.com/in/salma-begum-sheik-540bb061" className="contactLink"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.xing.com/you" className="contactLink"><i class="fa-brands fa-xing"></i></a>
+    </div>
+    </div>
+<Footer/>
     </div>
   );
 }
