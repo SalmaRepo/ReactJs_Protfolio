@@ -1,9 +1,9 @@
 .aboutDesk {
   font-size: 0.8rem;
   width: 80%;
-  margin: 5rem auto;
+  margin: 2rem auto;
   position: relative;
-  padding: 1rem;
+  padding-top: 6rem;
 }
 
 #dark .aboutDesk {
@@ -31,7 +31,7 @@
 }
 
 #dark .projectContainer {
-  border: 0.5px solid rgb(250, 242, 242);
+  border: none;
 }
 
 .myProjectsPara {

@@ -36,6 +36,7 @@
 
 }
 
+
 /* .scrollerRight {
   font-size: 1.5rem;
 
@@ -66,7 +67,7 @@
 }
 
 #dark .scrollerRight,
-.scrollerLeft {
+#dark .scrollerLeft {
   color: white;
 }
 
@@ -89,6 +90,20 @@
   background-color: rgba(255, 255, 255, 0.982);
   padding: 1.5rem;
   border: 1px solid rgb(12, 39, 193);
+  box-shadow: -1px 1px 10px 2px gray;
+  width: 80%;
+}
+
+#dark .projectDescCard {
+  position: absolute;
+  color: black;
+  left: 0rem;
+  bottom: 0rem;
+  /*     animation: hoverDescAnim 0.3s ease 0.3s forwards; */
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.982);
+  padding: 1.5rem;
+  border:none;
   box-shadow: -1px 1px 10px 2px gray;
   width: 80%;
 }
@@ -152,10 +167,12 @@
   color: white;
   font-weight: bolder;
   padding: 0.3rem 0.5rem;
-  width:30%;
+  width:60%;
   margin-top: rem;
 
 }
+
+
 
 
 
@@ -323,6 +340,7 @@
   .projectDescCard .projectDescButton {
     background-color: rgb(81, 84, 252);
     border: none;
+    width:40%;
     color: white;
     font-weight: bolder;
     padding: 0.3rem 0.5rem;

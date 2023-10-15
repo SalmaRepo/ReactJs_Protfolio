@@ -33,8 +33,8 @@ export default function Work() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-     
-      if (window.scrollY > 1000 || window.scrollY > 2000) {
+      console.log(window.scrollY)
+      if (window.scrollY > 3500 || window.scrollY > 2000) {
         setAnimLeft(true);
         setAnimRight(true);
       }

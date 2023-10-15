@@ -26,7 +26,7 @@ function App() {
     setMount(true);
     setInterval(()=>setLanding(false),3000)
   }, []); 
-
+/* 
   const projects = [
     {
       id: 0,
@@ -89,7 +89,7 @@ function App() {
         { brief: "adshcbadhvcdhavcdahnmhgmhgvgmgmgmgjmc" },
       ],
     },
-  ];
+  ]; */
 
   /*   function toggleTheme() {
     theme === "light" ? setTheme("dark") : setTheme("light");

@@ -175,8 +175,8 @@
 
 .input {
   border-radius: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .successContainer {
@@ -187,9 +187,9 @@
 }
 
 .formSubmit {
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -285,6 +285,11 @@
   .success{
     width: 40%;
     
+  }
+
+  .input{
+    font-size: 1rem;
+    padding: 1rem;
   }
 
   .success-checkmark {

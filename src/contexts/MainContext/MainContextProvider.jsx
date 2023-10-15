@@ -2,14 +2,23 @@ import { MainContext } from "./mainContext";
 import { useState } from "react";
 
 export default function MainContextProvider({ children }) {
-
   const [projectDescDisplay, setProjectDescDisplay] = useState(false);
   const [projectId, setProjectId] = useState("");
   const [showAbout, setShowAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  const [like, setLike] = useState(false);
-  const [likeId,setLikeId]=useState("");
+  const [like, setLike] = useState(
+    localStorage.getItem("like") ? localStorage.getItem("like") : false
+  );
+  const [likeId, setLikeId] = useState(
+    localStorage.getItem("likedId") ? localStorage.getItem("likedId") : ""
+  );
+  const [projectLike, setProjectLike] = useState(
+    localStorage.getItem("projectLike")
+      ? localStorage.getItem("projectLike")
+      : {["0"]:false}
+  );
+
   const projects = [
     {
       id: 0,
@@ -47,7 +56,10 @@ export default function MainContextProvider({ children }) {
         { title: "Rock-Paper-Scissor" },
         { code: "https://github.com/SalmaRepo/Rock-Paper-Scissor-Game" },
         { codeStack: "Html,CSS,JavaScript" },
-        { brief: "Simple yet Tricky to code Rock paper scissor Game lets you play against computer and displays your win based on the score" }
+        {
+          brief:
+            "Simple yet Tricky to code Rock paper scissor Game lets you play against computer and displays your win based on the score",
+        },
       ],
     },
     {
@@ -58,7 +70,10 @@ export default function MainContextProvider({ children }) {
         { title: "Shopping Cart" },
         { code: "https://github.com/SalmaRepo/Shopping_Cart_React" },
         { codeStack: "Xml,CSS,JavaScript,React" },
-        { brief: "This project replicates the shopping cart of an e-commerce application, filters the products based on size,Built in team, I contributed to majority of coding" },
+        {
+          brief:
+            "This project replicates the shopping cart of an e-commerce application, filters the products based on size,Built in team, I contributed to majority of coding",
+        },
       ],
     },
     {
@@ -69,7 +84,10 @@ export default function MainContextProvider({ children }) {
         { title: "Movie_Search" },
         { code: "https://github.com/SalmaRepo/Movie_Search" },
         { codeStack: "Xml,CSS,JavaScript,REACT" },
-        { brief: "A simple project based on movie API fetch, lets you search for any movie, displays movie banner, release date and title " },
+        {
+          brief:
+            "A simple project based on movie API fetch, lets you search for any movie, displays movie banner, release date and title ",
+        },
       ],
     },
 
@@ -81,16 +99,17 @@ export default function MainContextProvider({ children }) {
         { title: "Expenses_Tracker" },
         { code: "https://github.com/SalmaRepo/Expenses-React-App" },
         { codeStack: "Xml,CSS,JavaScript,ReactJs" },
-        { brief: "Group Project with a dummy User Login Page, lets you track daily expenses and incomes and also displays History of individual Spendings on daily basis based" },
+        {
+          brief:
+            "Group Project with a dummy User Login Page, lets you track daily expenses and incomes and also displays History of individual Spendings on daily basis based",
+        },
       ],
     },
   ];
 
-
   return (
     <MainContext.Provider
       value={{
-        
         projects,
         projectDescDisplay,
         setProjectDescDisplay,
@@ -103,8 +122,9 @@ export default function MainContextProvider({ children }) {
         showContact,
         setShowContact,
         likeId,
-        setLikeId
-       
+        setLikeId,
+        projectLike,
+        setProjectLike
       }}
     >
       {children}
