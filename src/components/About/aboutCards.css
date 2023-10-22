@@ -284,14 +284,14 @@
     display: flex;
     flex-direction: column;
     left: 10rem;
-    bottom: 0rem;
+    top: 2rem;
     /*     animation: hoverDescAnim 0.3s ease 0.3s forwards; */
     z-index: 5;
     background-color: white;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border: 1px solid rgb(244, 238, 238);
     box-shadow: -1px 1px 10px 2px rgb(217, 203, 203);
-    width: 100%;
+   width: 100%;
     color: black;
     
   }
@@ -328,7 +328,7 @@
   }
 
   .hoverDescPara {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     margin: 1rem auto;
   }
 
@@ -341,10 +341,11 @@
   .projectDescCard .projectDescButton {
     background-color: rgb(81, 84, 252);
     border: none;
-    width:40%;
+    width:30%;
     color: white;
     font-weight: bolder;
-    padding: 0.3rem 0.5rem;
+    height: 80%;
+    
   }
 
   .projectDescFooter {
