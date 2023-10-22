@@ -283,16 +283,17 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 12rem;
-    bottom: -5rem;
+    left: 10rem;
+    bottom: 0rem;
     /*     animation: hoverDescAnim 0.3s ease 0.3s forwards; */
     z-index: 5;
     background-color: white;
-    padding: 1.5rem;
-    border: 1px solid gray;
-    box-shadow: -1px 1px 10px 2px gray;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(244, 238, 238);
+    box-shadow: -1px 1px 10px 2px rgb(217, 203, 203);
     width: 100%;
     color: black;
+    
   }
 
   .projectDescCard::before {

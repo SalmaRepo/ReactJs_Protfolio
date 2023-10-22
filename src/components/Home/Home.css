@@ -122,10 +122,9 @@ padding: 0;
   }
 }
 
-@media (min-width: 761px) {
+@media (min-width: 761px) and (max-width:2000px)  {
   .homeDesk {
-    display: flex;
-
+    display: flex;            
     width: 60%;
     flex-direction: row;
     height: 100vh;
@@ -133,7 +132,7 @@ padding: 0;
     /*   margin: 2rem auto; */
     margin: 2rem auto;
     overflow: hidden;
-
+    padding-top: 5rem;
     align-items: center;
     justify-content: space-between;
 
@@ -146,8 +145,8 @@ padding: 0;
   }
 
   .homeImgDesk {
-    width: 30%;
-    height: 18rem;
+    width: 20%;
+  
 
     /*   position: absolute;
   left: 4rem;   
@@ -181,14 +180,15 @@ padding: 0;
 
   .homeDesPara {
     margin-bottom: 2rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    text-align: left;
   }
 
   .homeDesk .hireMeAnim {
     animation: hire 0.5s ease 0.5s 3;
     font-size: 1.5rem;
     width: 20%;
-    font-size: 1.5rem;
+    
 
     }
 
@@ -216,7 +216,7 @@ padding: 0;
   }
   .nameDesk {
     color: rgb(251, 75, 104);
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   /* .contactDesk {
@@ -236,7 +236,7 @@ padding: 0;
   }
 
   .hello {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .hireMeAnim {
@@ -244,12 +244,12 @@ padding: 0;
   }
 
   .name {
-    font-size: 4rem;
+    font-size: 3.5rem;
     
   }
 
   .webDev {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
 }

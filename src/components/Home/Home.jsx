@@ -80,9 +80,9 @@ export default function Home() {
               I'm <span className="nameDesk">Salma Sheik</span>
             </h1>
             <h2 className="webDev">
-              Front-End Developer with{" "}
+              Frontend Developer{" "}
               <span
-                style={{ color: getRandomColor(), fontWeight: "lighter" }}
+                style={{ color: getRandomColor(), fontWeight: "lighter" ,fontSize:"2rem"}}
               >{`{${techDisp}}`}</span>{" "}
               <span className="cursorHome" style={{ color: getRandomColor() }}>
                 |
@@ -94,8 +94,7 @@ export default function Home() {
               Committed to delivering visually appealing and user-friendly web
               solutions that enhance the user experience. Seeking an opportunity
               to apply and expand my knowledge in front-end development while
-              continuously learning and adapting to emerging technologies. Have
-              alook at my Profile !!
+              continuously learning and adapting to emerging technologies.
             </p>
 
             <a className="hireMeAnim" href="#Contact">
