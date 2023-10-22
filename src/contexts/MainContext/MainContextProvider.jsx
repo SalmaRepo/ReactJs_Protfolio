@@ -16,7 +16,7 @@ export default function MainContextProvider({ children }) {
   const [projectLike, setProjectLike] = useState(
     localStorage.getItem("projectLike")
       ? localStorage.getItem("projectLike")
-      : {["0"]:false}
+      : { ["0"]: false }
   );
 
   const projects = [
@@ -30,7 +30,7 @@ export default function MainContextProvider({ children }) {
         { codeStack: "Html,CSS,JavaScript" },
         {
           brief:
-            "This is a simple calculator app.You can perform all the basic mathematical operations.It is completely responsive.This app also allows you to perform operations in decimals",
+            "This is a responsive calculator app.You can perform all the basic mathematical operations.This app also allows you to perform operations in decimals",
         },
       ],
     },
@@ -124,7 +124,7 @@ export default function MainContextProvider({ children }) {
         likeId,
         setLikeId,
         projectLike,
-        setProjectLike
+        setProjectLike,
       }}
     >
       {children}
