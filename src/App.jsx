@@ -16,7 +16,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const {   mount,setMount,theme, setTheme, toggleTheme } =
+  const {mount,setMount,theme, setTheme, toggleTheme } =
     useContext(ThemeContext);
   
     const [landing,setLanding]=useState(true)

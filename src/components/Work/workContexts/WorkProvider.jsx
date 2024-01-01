@@ -5,7 +5,7 @@ export default function WorkProvider({ children }) {
   const timeLineData = [
     {
       id:'W-0',   
-      title: "Tutor at DCI Institute",
+      title: "Web Development Tutor",
       duration: "May 2023-Feb 2024",
       skills: "Html,CSS,JavaScript,React",
       description:

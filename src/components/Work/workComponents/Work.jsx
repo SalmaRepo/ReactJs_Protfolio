@@ -51,9 +51,9 @@ export default function Work() {
         <a className="resume" href="Salma Front End English Resume.pdf" download>
           English Resume <i class="fa-solid fa-down-long"></i>
         </a>
-        <a className="resume" href="Salma Front End Deutsch Resume.pdf" download>
+       {/*  <a className="resume" href="Salma Sheik_Full Stack_CV.pdf" download>
           Deutsch Resume <i class="fa-solid fa-down-long"></i>
-        </a>
+        </a> */}
       </p>
 
       <div className="workTimeLineContainer">

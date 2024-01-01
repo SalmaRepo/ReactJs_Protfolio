@@ -17,11 +17,11 @@ export default function Skills() {
 
   const skillsData = {
     TechnicalSkills: [
-      { skill: "HTML", percent: "90%", animName: "htmlSkillBar" },
-      { skill: "CSS", percent: "90%", animName: "cssSkillBar" },
-      { skill: "JavaScript", percent: "80%", animName: "jsSkillBar" },
-      { skill: "React", percent: "65%", animName: "reactSkillBar" },
-      { skill: "Python", percent: "50%", animName: "pythonSkillBar" },
+      { skill: "HTML5,CSS3", percent: "90%", animName: "htmlSkillBar" },
+      { skill: "NodeJS, Express JS, Mongo DB", percent: "90%", animName: "backendBar" },
+      { skill: "Javascript and Typescript", percent: "80%", animName: "languageBar" },
+      { skill: "React, Angular, Vue", percent: "65%", animName: "frameworkSkillBar" },
+      { skill: "Saas and BootStrap", percent: "70%", animName: "stylingSkillBar" },
      
     ],
 

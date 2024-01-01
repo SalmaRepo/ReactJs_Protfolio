@@ -13,13 +13,9 @@ import { MainContext } from "../../contexts/MainContext/mainContext";
 export default function Home() {
   const view = useRef();
   const skillsHome = [
-    "React JS",
-    "JavaScript",
-    "Html",
-    "CSS",
-    "SCSS",
-    "React Hooks",
-    "Contexts",
+    "Full-Stack Developer",
+    "MERN Stack Developer",
+    "Frontend Developer",
   ];
   const [techDisp, setTechDisp] = useState(skillsHome[0]);
 
@@ -56,7 +52,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const intervalID = setInterval(shuffle, 1500);
+    const intervalID = setInterval(shuffle, 2000);
     return () => clearInterval(intervalID);
   }, [shuffle]);
 
@@ -76,24 +72,22 @@ export default function Home() {
           <img className="homeImgDesk" src={HomeImg} alt="" />
           <div className="deskDesc">
             <h2 className="hello">Hello,</h2>
-            <h1 className="name">
+            <h2 className="name">
               I'm <span className="nameDesk">Salma Sheik</span>
-            </h1>
-            <h2 className="webDev">
-              Frontend Developer{" "}
-              <span
-                style={{ color: getRandomColor(), fontWeight: "lighter" ,fontSize:"2rem"}}
-              >{`{${techDisp}}`}</span>{" "}
+            </h2>
+            <h3 className="webDev" 
+             style={{ color: getRandomColor(), fontWeight: "bold" ,fontSize:"2rem"}}
+              >{techDisp}
               <span className="cursorHome" style={{ color: getRandomColor() }}>
                 |
               </span>
-            </h2>
+            </h3>
             <p className="homeDesPara">
               Passionately looking forward to contribute my
               technical skills and creativity to a dynamic web development team.
               Committed to delivering visually appealing and user-friendly web
               solutions that enhance the user experience. Seeking an opportunity
-              to apply and expand my knowledge in front-end development while
+              to apply and expand my knowledge in full-stack web development while
               continuously learning and adapting to emerging technologies.
             </p>
 

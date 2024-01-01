@@ -84,10 +84,10 @@
 }
 
 .htmlSkillBar:before,
-.cssSkillBar:before,
-.jsSkillBar:before,
-.reactSkillBar:before,
-.pythonSkillBar:before {
+.backendBar:before,
+.languageBar:before,
+.frameworkSkillBar:before,
+.stylingSkillBar:before {
   content: "";
   position: absolute;
   height: inherit;
@@ -97,14 +97,18 @@
   animation: skills 0.7s linear 0.2s backwards;
 }
 
-.jsSkillBar:before {
-  width: 80%;
+.backendBar:before{
+  width:60%;
 }
-.reactSkillBar:before {
-  width: 65%;
+
+.languageBar:before {
+  width: 70%;
 }
-.pythonSkillBar:before {
-  width: 50%;
+.frameworkSkillBar:before {
+  width: 75%;
+}
+.stylingSkillBar:before {
+  width: 77%;
 }
 
 

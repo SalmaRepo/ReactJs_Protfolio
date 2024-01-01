@@ -78,7 +78,22 @@
 }
 .webDev {
   font-size: 1.5rem;
+  animation: callback 1s ease;
+  letter-spacing: 0.15rem;
 }
+
+@keyframes callback{
+  from{
+    width: 0;
+   
+  }
+
+  to{
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 
 .homeDesk .hireMeAnim{
   text-decoration: none;
