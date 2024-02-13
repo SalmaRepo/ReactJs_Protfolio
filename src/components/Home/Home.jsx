@@ -71,7 +71,7 @@ export default function Home() {
         <div className="homeDesk">
           <img className="homeImgDesk" src={HomeImg} alt="" />
           <div className="deskDesc">
-            <h2 className="hello">Hello,</h2>
+            <h2 className="hello">Hi<i className="fa-solid fa-hand"></i></h2>
             <h2 className="name">
               I'm <span className="nameDesk">Salma Sheik</span>
             </h2>

@@ -12,6 +12,40 @@
  
 }
 
+.homeDesk .fa-hand{
+  color: rgb(245, 209, 108);
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  animation: hand 2.1s 0.6s infinite;
+}
+
+@keyframes hand{
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(16deg);
+  }
+  20% {
+    transform: rotate(-6deg);
+  }
+  30% {
+    transform: rotate(16deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(16deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 #dark .HomeDesk {
   background-color: rgb(71, 71, 71);
 }
@@ -55,6 +89,137 @@
   z-index: 0;
   font-size: 1rem;
   /*    background-color: rgba(255, 255, 255, 0.192); */
+}
+.area{
+  background:none;  
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+  width: 100%;
+  height:100vh;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+ 
+  }
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background:  #8f94fb;
+  animation: animate 30s linear infinite;
+  bottom: -150px;
+  
+}
+
+#dark .circles li{
+background: rgba(248, 239, 240, 0.558);
+}
+
+.circles li:nth-child(1){
+  left: 1rem;
+  width: 10px;
+  height: 10px;
+  animation-delay: 0s;
+  
+}
+
+
+.circles li:nth-child(2){
+  left: 5rem;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  background: rgba(157, 190, 246, 0.2);
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 2%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 90%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 25%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 15%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
 }
 
 #dark .deskDesc {
@@ -176,6 +341,12 @@ padding: 0;
     background: none;
 
    
+  }
+
+  .homeDesk .fa-hand{
+ 
+    font-size: 2rem;
+    
   }
 
   .area{
@@ -322,13 +493,13 @@ padding: 0;
   font-size: 1.5rem;
   background-color:  #8f94fb;
   color: rgb(48, 48, 49);
-  animation: scroller 2s ease 0.5s 10 ;
+  animation: scroller 2s ease 0.5s 5 ;
  
 }
 .scrollDown:hover{
-  animation: scroller 2s ease 0.5s 10 ;
   background-color: #8ffbe0;
   color: rgb(22, 21, 21);
+  animation: none;
 }
 
 
@@ -338,7 +509,7 @@ padding: 0;
     transform: translateY(-1rem);
   }
   100%{
-    transform: translateY(0rem);
+    transform: translateY(1rem);
   }
   
 }
