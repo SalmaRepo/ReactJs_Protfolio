@@ -5,7 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 export default function Skills() {
   const [animateSkills, setAnimateSkills] = useState(false);
-  console.log(animateSkills);
+ /*  console.log(animateSkills); */
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -37,9 +37,9 @@ export default function Skills() {
       <div className="skillsSection">
         <div className="skillsTechnicalContainer">
           <h2 className="skillsHead">Technical Skills</h2>
-          {skillsData.TechnicalSkills.map((type) => {
+          {skillsData.TechnicalSkills.map((type,index) => {
             return (
-              <div className="technicalSkillsCard" key={type.id}>
+              <div className="technicalSkillsCard" key={index}>
                 <div className="technicalSkillType">
                   <p className="skillName">{type.skill}</p>
                   {/* <p className="skillName">{type.percent}</p> */}
@@ -55,9 +55,9 @@ export default function Skills() {
         <div className="skillsLanguageContainer">
           <h2 className="skillsHead">Language Skills</h2>
           <div className="languageSkillsSection">
-            {skillsData.LanguageSkills.map((type) => {
+            {skillsData.LanguageSkills.map((type,index) => {
               return (
-                <div className="LanguageSkillsCard" key={type.id}>
+                <div className="LanguageSkillsCard" key={index}>
                   <div className="LanguageSkillType">
                     <p className="skillName">{type.skill}</p>
                  

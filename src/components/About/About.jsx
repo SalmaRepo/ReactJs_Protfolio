@@ -1,5 +1,4 @@
 import { useContext, useState, useRef } from "react";
-
 import { MainContext } from "../../contexts/MainContext/mainContext";
 import "./about.css";
 import AboutCards from "./AboutCards";

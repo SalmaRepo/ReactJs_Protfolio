@@ -21,10 +21,10 @@ function App() {
   
     const [landing,setLanding]=useState(true)
 
-  console.log(mount);
+ /*  console.log(mount); */
   useEffect(() => {
     setMount(true);
-    setInterval(()=>setLanding(false),3000)
+    setInterval(()=>setLanding(false),5000)
   }, []); 
 /* 
   const projects = [

@@ -1,7 +1,7 @@
 .landingPage{
     font-size: 5rem;
     font-family: italic;
-    color: rgb(237, 88, 187);
+    color:  #8f94fb;
     animation: landingName 2s ease 2s forwards ;
     position: absolute;
     bottom: 0rem;
@@ -24,7 +24,7 @@
     position: absolute;
     left: 0;
     z-index: 100;
-    background-color: yellow;
+    background-color: rgb(178, 178, 175);
     height: 100%;
     animation: landingLeft 1s linear 1.5s forwards;
 }
@@ -34,8 +34,7 @@
     position: absolute;
     right: 0;
     z-index: 100;
-    background-color: rgb(255, 0, 115);
-    border: 2px solid red;
+    background-color: #8f94fb ; 
     height: 100%;
     animation: landingLeft 1s linear 1.5s forwards;
 }
@@ -43,7 +42,7 @@
 .landingLine{
     width: 0.2%;
     height: 50%;
-    background-color: rgb(247, 115, 115);
+    background-color: rgb(15, 15, 15);
     position: absolute;
     bottom: 0;
     animation: landingLine 3s linear 1s forwards;

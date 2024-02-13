@@ -75,19 +75,25 @@ export default function Home() {
             <h2 className="name">
               I'm <span className="nameDesk">Salma Sheik</span>
             </h2>
-            <h3 className="webDev" 
-             style={{ color: getRandomColor(), fontWeight: "bold" ,fontSize:"2rem"}}
-              >{techDisp}
+            <h3
+              className="webDev"
+              style={{
+                color: getRandomColor(),
+                fontWeight: "bold",
+                fontSize: "2rem",
+              }}
+            >
+              {techDisp}
               <span className="cursorHome" style={{ color: getRandomColor() }}>
                 |
               </span>
             </h3>
             <p className="homeDesPara">
-              Passionately looking forward to contribute my
-              technical skills and creativity to a dynamic web development team.
-              Committed to delivering visually appealing and user-friendly web
-              solutions that enhance the user experience. Seeking an opportunity
-              to apply and expand my knowledge in full-stack web development while
+              Passionately looking forward to contribute my technical skills and
+              creativity to a dynamic web development team. Committed to
+              delivering visually appealing and user-friendly web solutions that
+              enhance the user experience. Seeking an opportunity to apply and
+              expand my knowledge in full-stack web development while
               continuously learning and adapting to emerging technologies.
             </p>
 
@@ -96,11 +102,31 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="area">
+          <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </div>
 
       {/*  <section>{showAbout && <About />}</section>
       <section>{showContact && <Work/>}</section>
    */}
+      <button
+        onClick={() => window.scrollTo({ top: 1000, behavior: "smooth" })}
+        className="scrollDown"
+      >
+        <i className="fa-solid fa-down-long"></i>
+      </button>
     </>
   );
 }

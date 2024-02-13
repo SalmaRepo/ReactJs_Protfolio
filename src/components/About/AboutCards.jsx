@@ -52,7 +52,7 @@ export default function AboutCards() {
                 className="projectTitle"
                 onMouseOver={(e) => {
                   /* setLike(false); */
-                  console.dir(e.target.parentElement);
+                  /* console.dir(e.target.parentElement); */
                   if (e.target.parentElement.id === `${project.id}`) {
                     setProjectDescDisplay(true);
                     setProjectId(e.target.parentElement.id);

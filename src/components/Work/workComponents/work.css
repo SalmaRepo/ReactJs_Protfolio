@@ -56,7 +56,7 @@
 }
 
 #dark .workContainer {
-  background-color: black;
+  background-color: rgb(71,71,71);
   color: white;
 }
 
@@ -399,11 +399,19 @@
 
   .timeLineCardLeft,
   .timeLineCardRight {
-    width: 65vw;
+    width: 70vw;
     font-size: 0.8rem;
     gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+   
   
   }
+
+
   .timeLineCardLeftContainer {
     align-items: flex-start;
    margin-top: 5rem;
@@ -415,6 +423,7 @@
     left: -2rem;
     margin-top: 26rem;
     gap: 30rem;
+    
   
 
    

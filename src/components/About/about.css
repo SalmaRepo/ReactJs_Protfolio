@@ -7,27 +7,26 @@
 }
 
 #dark .aboutDesk {
-  background-color: black;
+  background-color:none;
   color: white;
 }
 .aboutMeDesc {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1rem; 
+}
+.aboutMePara{
+  text-align: justify;
 }
 
 .projectContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
-
   gap: 2rem;
-
   margin-top: 1rem;
-  position: relative;
-  
-
+  position: relative; 
 }
 
 #dark .projectContainer {
@@ -51,7 +50,6 @@
   gap: 2rem;
   width: 100%;
   justify-content: space-between;
-
   padding: 1rem;
 }
 
@@ -185,8 +183,6 @@
 
 #number{
     font-weight: bold;
-  
-
 }
 
 
@@ -246,7 +242,6 @@ svg{
     width: 80%;
     margin: 0 auto;
     position: relative;
-
     font-size: 1rem;
     margin-top: 4rem;
   }
@@ -262,10 +257,9 @@ svg{
     flex-direction: column;
     width: 60vw;
     margin: 0 auto;
-    box-shadow: 2px 2px 6px 2px gray;
+    box-shadow: 2px 2px 6px 2px rgb(190, 195, 239);
     overflow-x: auto;
     gap: 1rem;
-    border: 1px solid;
     margin-top: 1rem;
     position: relative;
     padding: 2rem;
@@ -279,12 +273,10 @@ svg{
     display: flex;
   }
 
-  .skillsSectionContainer {
-    
+  .skillsSectionContainer { 
     width: 80%;
     margin: 4rem auto;
-    padding: 1rem 2rem;
-    
+    padding: 1rem 2rem; 
     background-color: rgba(121, 169, 233, 0.139);
   }
   
@@ -294,7 +286,6 @@ svg{
     gap: 2rem;
     width: 100%;
     justify-content: space-between;
- 
     padding: 0rem 3rem;
   }
   

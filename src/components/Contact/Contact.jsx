@@ -73,9 +73,9 @@ export default function Contact() {
      
 
     <div className="contactLinks">
-      <a href="https://github.com/SalmaRepo" className="contactLink"><i class="fa-brands fa-github"></i></a>
-      <a href="www.linkedin.com/in/salma-begum-sheik-540bb061" className="contactLink"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.xing.com/you" className="contactLink"><i class="fa-brands fa-xing"></i></a>
+      <a href="https://github.com/SalmaRepo" className="contactLink" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      <a href="www.linkedin.com/in/salma-begum-sheik-540bb061" className="contactLink" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.xing.com/profile/Salma_Sheik2/web_profiles" className="contactLink"><i class="fa-brands fa-xing" target="_blank" rel="noopener noreferrer"></i></a>
     </div>
     </div>
 <Footer/>
