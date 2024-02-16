@@ -29,9 +29,9 @@ console.log(finalDescription[1].code)
           </div>
         );
       })}
-      <button className="closeProjectDesc" onClick={()=>setProjectDescDisplay(false)}>x</button>
+      {/* <button className="closeProjectDesc" onClick={()=>setProjectDescDisplay(false)}>x</button> */}
 
-      <CodeButton code={finalDescription[1].code}/>
+      <CodeButton code={finalDescription[1].code} link={projectDisp.gitLink}/>
     </div>
   );
 }

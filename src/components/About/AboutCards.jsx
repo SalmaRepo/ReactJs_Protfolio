@@ -13,7 +13,7 @@ export default function AboutCards() {
     projectId,
     setLike,
     like,
-  
+
     likeId,
     setLikeId,
   } = useContext(MainContext);
@@ -21,11 +21,15 @@ export default function AboutCards() {
   const scroll = useRef();
 
   return (
-    <div style={{display:'flex'}}>
+    <div style={{ display: "flex" }}>
       <div
         className="scrollerLeft"
         onClick={() => {
-          scroll.current.scrollLeft -= 50;
+          if (window.innerWidth > 760) {
+            scroll.current.scrollLeft -= 600;
+          } else {
+            scroll.current.scrollLeft -= 250;
+          }
         }}
       >
         <i className="fa-solid fa-chevron-left"></i>
@@ -34,25 +38,37 @@ export default function AboutCards() {
         {projects.map((project) => {
           return (
             <div key={project.id} id={project.id} className="projectCardStyle">
-              <a href={project.gitLink} target="_blank" rel="noopener noreferrer" className="imageLink">
-                <img
-                  src={`./${project.title}.jpg`}
-                  className="projectImageSize"
-                  alt=""
-                />
-              </a>
+              <div className="projectCard-inner">
+                <div className="projectCard-front">
+                  <div
+                   /*  href={project.gitLink}
+                    target="_blank"
+                    rel="noopener noreferrer" */
+                    className="imageLink"
+                  >
+                    <img
+                      src={`./${project.title}.jpg`}
+                      className="projectImageSize"
+                      alt=""
+                      onMouseOver={() => {
+                        setProjectDescDisplay(true);
+                        setProjectId(project.id);
+                      }}
+                    />
+                  </div>
+                </div>
 
-
-
-              {project.id == projectId && projectDescDisplay && (
-                <ProjectDescription />
-              )}
+                <div className="projectCard-back">
+                  {project.id == projectId && projectDescDisplay && (
+                    <ProjectDescription />
+                  )}
+                </div>
+              </div>
 
               <h3
                 className="projectTitle"
-                onMouseOver={(e) => {
-                  /* setLike(false); */
-                  /* console.dir(e.target.parentElement); */
+                /*      onMouseOver={(e) => {
+                  
                   if (e.target.parentElement.id === `${project.id}`) {
                     setProjectDescDisplay(true);
                     setProjectId(e.target.parentElement.id);
@@ -67,24 +83,26 @@ export default function AboutCards() {
                       
                     }, 10000);
                   }
-                }}
+                }} */
               >
                 {project.title}{" "}
               </h3>
             </div>
           );
         })}
-
-     
       </div>
       <div
-          className="scrollerRight"
-          onClick={() => {
-            scroll.current.scrollLeft += 70;
-          }}
-        >
-          <i className="fa-solid fa-chevron-right"></i>
-        </div>
+        className="scrollerRight"
+        onClick={() => {
+          if (window.innerWidth > 760) {
+            scroll.current.scrollLeft += 600;
+          } else {
+            scroll.current.scrollLeft += 250;
+          }
+        }}
+      >
+        <i className="fa-solid fa-chevron-right"></i>
+      </div>
     </div>
   );
 }

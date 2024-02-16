@@ -144,6 +144,7 @@
 
 }
 
+
 .LanguageSkillType {
   display: flex;
 
@@ -310,6 +311,7 @@ svg{
     display: flex;
     justify-content: space-between;
   }
+ 
   
   .skillBar {
     height: 0.8rem;
