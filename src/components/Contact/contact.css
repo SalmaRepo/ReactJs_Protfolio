@@ -190,10 +190,10 @@
   width: 70%;
   margin: 0 auto;
   padding: 0.3rem;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   font-size: 1rem;
-  font-weight: bold;
-  background-color: rgb(251, 75, 104);
+  font-weight: light;
+  background-color: rgb(81, 81, 224);
   color: white;
   box-shadow: 2px 2px 2px 2px gray;
   border: none;

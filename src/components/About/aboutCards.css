@@ -139,17 +139,16 @@ transform: rotateY(180deg);
 } 
 
 #dark .projectDescCard {
-  position: absolute;
-  color: black;
-  left: 0rem;
-  bottom: 0rem;
-  /*     animation: hoverDescAnim 0.3s ease 0.3s forwards; */
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.982);
+  width: 15rem;
+  height: 15rem;
+  background-color: rgb(53, 53, 53);
   padding: 1.5rem;
-  border:none;
-  box-shadow: -1px 1px 10px 2px gray;
-  width: 80%;
+  box-shadow: 1px 1px 10px 2px gray;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.2rem;
+  color: white;
 }
 
 /* .projectDescCard .closeProjectDesc{
@@ -419,6 +418,8 @@ transform: rotateY(180deg);
   #dark .projectDescCard{
     width:100%;
     text-align: left;
+    width:20rem;
+    height: 20rem;
   }
 
   .hoverDesc {
